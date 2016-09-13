@@ -18,7 +18,7 @@ View all components, props and styles on GitHub wiki page: [https://github.com/D
 * 1.1.3 <br>
 Versions 1.1.3 or previous are tests and have bugs
 
-### WARNING: versions previous have bugs ###
+### WARNING: versions previous 2.0.0 have bugs ###
 
 * 2.0.0 <br>
 In 2.0.0 you can use the cmponent: ``` RSGButton ``` <br>
