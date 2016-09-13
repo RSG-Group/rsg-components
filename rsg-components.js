@@ -1,3 +1,4 @@
 'use strict';
 
-exports.RSGButton = require('./lib/scripts');
+exports.RSGBox = require('./lib/RSGBox');
+exports.RSGButton = require('./lib/RSGButton');
