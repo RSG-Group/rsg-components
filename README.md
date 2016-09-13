@@ -26,3 +26,7 @@ In 2.0.0 you can use the cmponent: ``` RSGButton ``` <br>
 
 * 2.0.1 <br>
 README.md added
+
+* 2.0.2 <br>
+In 2.0.2 you can use the cmponent: ``` RSGBox ``` <br>
+[https://github.com/Devs123/rsg-components/wiki/RSGBox](https://github.com/Devs123/rsg-components/wiki/RSGBox)
