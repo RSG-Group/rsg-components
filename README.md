@@ -4,7 +4,8 @@
 
 ```
 npm install rsg-components
-``` or ``` rsg-components@version ```
+``` 
+or rsg-components@version
 
 ### How to use: ###
 ```
