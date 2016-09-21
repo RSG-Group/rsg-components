@@ -30,3 +30,8 @@ README.md added
 * 2.0.2 <br>
 In 2.0.2 you can use the cmponent: ``` RSGBox ``` <br>
 [https://github.com/Devs123/rsg-components/wiki/RSGBox](https://github.com/Devs123/rsg-components/wiki/RSGBox)
+
+* 2.0.3 <br>
+In 2.0.3 you can use the cmponent: ``` RSGLabel ``` <br>
+[https://github.com/Devs123/rsg-components/wiki/RSGLabel](https://github.com/Devs123/rsg-components/wiki/RSGLabel) <br/>
+``` RSGBox ``` bug fixed
