@@ -35,3 +35,6 @@ In 2.0.2 you can use the cmponent: ``` RSGBox ``` <br>
 In 2.0.3 you can use the cmponent: ``` RSGLabel ``` <br>
 [https://github.com/Devs123/rsg-components/wiki/RSGLabel](https://github.com/Devs123/rsg-components/wiki/RSGLabel) <br/>
 ``` RSGBox ``` bug fixed
+
+* 2.0.4 <br>
+``` RSGLabel ``` bug fixed
