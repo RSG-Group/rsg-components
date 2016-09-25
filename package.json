@@ -1,10 +1,14 @@
 {
   "name": "rsg-components",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Some React.js components with beautiful styles and modified props",
   "main": "rsg-components.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Devs123/rsg-components"
   },
   "author": "RSG",
   "dependencies": {

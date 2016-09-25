@@ -38,3 +38,6 @@ In 2.0.3 you can use the cmponent: ``` RSGLabel ``` <br>
 
 * 2.0.4 <br>
 ``` RSGLabel ``` bug fixed
+
+* 2.0.5 <br>
+Added github repository in package.json 
