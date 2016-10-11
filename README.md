@@ -40,4 +40,8 @@ In 2.0.3 you can use the cmponent: ``` RSGLabel ``` <br>
 ``` RSGLabel ``` bug fixed
 
 * 2.0.5 <br>
-Added github repository in package.json 
+Added github repository in package.json
+
+* 2.0.6 <br>
+In 2.0.6 you can use the cmponent: ``` RSGFormBasic ``` <br>
+[https://github.com/Devs123/rsg-components/wiki/RSGFormBasic](https://github.com/Devs123/rsg-components/wiki/RSGFormBasic)
