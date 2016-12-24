@@ -45,3 +45,8 @@ Added github repository in package.json
 * 2.0.6 <br>
 In 2.0.6 you can use the cmponent: ``` RSGFormBasic ``` <br>
 [https://github.com/Devs123/rsg-components/wiki/RSGFormBasic](https://github.com/Devs123/rsg-components/wiki/RSGFormBasic)
+
+* 2.0.7 <br>
+In 2.0.7 you can use the ``` RSGTransition ``` style function <br>
+[https://github.com/Devs123/rsg-components/wiki/RSGTransition](https://github.com/Devs123/rsg-components/wiki/RSGTransition)
+Note: Added sample paragraph in index.html
