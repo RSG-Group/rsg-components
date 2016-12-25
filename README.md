@@ -48,5 +48,5 @@ In 2.0.6 you can use the cmponent: ``` RSGFormBasic ``` <br>
 
 * 2.0.7 <br>
 In 2.0.7 you can use the ``` RSGTransition ``` style function <br>
-[https://github.com/Devs123/rsg-components/wiki/RSGTransition](https://github.com/Devs123/rsg-components/wiki/RSGTransition)
+[https://github.com/Devs123/rsg-components/wiki/RSGTransition](https://github.com/Devs123/rsg-components/wiki/RSGTransition) <br>
 Note: Added sample paragraph in index.html
