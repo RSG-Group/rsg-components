@@ -50,3 +50,8 @@ In 2.0.6 you can use the cmponent: ``` RSGFormBasic ``` <br>
 In 2.0.7 you can use the ``` RSGTransition ``` style function <br>
 [https://github.com/Devs123/rsg-components/wiki/RSGTransition](https://github.com/Devs123/rsg-components/wiki/RSGTransition) <br>
 Note: Added sample paragraph in index.html
+
+* 2.0.8 <br>
+In 2.0.8 you can use the component ``` RSGProgressBar ``` <br>
+[https://github.com/Devs123/rsg-components/wiki/RSGProgressBar](https://github.com/Devs123/rsg-components/wiki/RSGProgressBar) <br>
+Note: Added new images in GitHub repo.
