@@ -55,3 +55,6 @@ Note: Added sample paragraph in index.html
 In 2.0.8 you can use the component ``` RSGProgressBar ``` <br>
 [https://github.com/Devs123/rsg-components/wiki/RSGProgressBar](https://github.com/Devs123/rsg-components/wiki/RSGProgressBar) <br>
 Note: Added new images in GitHub repo.
+
+* 2.0.9 <br>
+In 2.0.9 you can read the tips at ``` ..../rsg-components/tips ``` <br>
