@@ -4,11 +4,11 @@
 ```
 npm install rsg-components
 ```
-<br> or <br>
+or <br>
 ```
 npm install rsg-components@version
 ```
-<br> or <br>
+or <br>
 ```
 git clone https://github.com/Devs123/rsg-components
 ``` 
