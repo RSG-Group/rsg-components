@@ -1,4 +1,4 @@
-window.anim = function(txt1, txt2, progressCount, speed){
+window.anim = function(txt1, txt2, progressCount, speed, selector){
   if (!progressCount || !speed) alert("You MUST set text/string, progressCount and speed in the anim() function"); 
   var p = 1;
   var el = document.querySelector('.PP');
