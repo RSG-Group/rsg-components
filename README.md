@@ -1,12 +1,12 @@
 # Hello in rsg-components #
 
 * Install <br>
-__With npm:__<br>
 ```
 npm install rsg-components
-``` 
-or ``` rsg-components@version ```<br>
-__With git:__<br>
+``` <br> or <br>
+```
+npm install rsg-components@version
+``` <br> or <br>
 ```
 git clone https://github.com/Devs123/rsg-components
 ``` 
