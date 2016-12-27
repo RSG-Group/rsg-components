@@ -1,11 +1,15 @@
 # Hello in rsg-components #
 
-* Install
-
+* Install <br>
+__With npm:__<br>
 ```
 npm install rsg-components
 ``` 
-or ``` rsg-components@version ```
+or ``` rsg-components@version ```<br>
+__With git:__<br>
+```
+git clone https://github.com/Devs123/rsg-components
+``` 
 
 ### How to use: ###
 ```
@@ -58,3 +62,9 @@ Note: Added new images in GitHub repo.
 
 * 2.0.9 <br>
 In 2.0.9 you can read the tips at ``` ..../rsg-components/tips ``` <br>
+
+* 2.0.10 <br>
+You can read the tips at ``` ..../rsg-components/tips ``` <br>
+``` RSGProgressBar ``` bug fixed <br>
+``` README.md ``` edited <br>
+NOTE: Added new images for wiki
