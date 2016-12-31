@@ -1,7 +1,7 @@
 window.anim = function(txt1, txt2, progressCount, speed, selector){
   if (!progressCount || !speed) alert("You MUST set text/string, progressCount and speed in the anim() function"); 
   var p = 1;
-  var el = document.querySelector('.PP');
+  var el = document.querySelector(selector + "SPAN");
   var i = setInterval(function(){
     el.style.width = p + "%";
     el.style.transition = "width " + (speed / 500) + "s linear;";

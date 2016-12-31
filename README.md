@@ -70,3 +70,6 @@ You can read tips at ``` ..../rsg-components/tips ``` <br>
 ``` RSGProgressBar ``` bug fixed <br>
 ``` README.md ``` edited <br>
 NOTE: Added new images for wiki
+
+* 2.0.11 <br>
+Update: ``` RSGProgressBar ```
