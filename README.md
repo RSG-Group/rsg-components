@@ -13,6 +13,10 @@ or <br>
 git clone https://github.com/Devs123/rsg-components
 ``` 
 
+# YouTube tutorial: #
+[![tutorial](images/tutorial.png)](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x) </br>
+Plase subscribe: [![click here](images/channel.png)](https://www.youtube.com/c/RadiCho)
+
 ### How to use: ###
 ```
 <RSGComponentsName props>children</RSGComponentsName>
