@@ -77,3 +77,7 @@ NOTE: Added new images for wiki
 
 * 2.0.11 <br>
 Update: ``` RSGProgressBar ```
+
+* 2.0.12 <br>
+YouTube tutorial - [https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x) </br>
+Please subscribe for my channel: (http://youtube.com/c/RadiCho)[http://youtube.com/c/RadiCho]
