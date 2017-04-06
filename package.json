@@ -1,6 +1,6 @@
 {
   "name": "rsg-components",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "Some React.js components with beautiful styles and modified props",
   "main": "rsg-components.js",
   "scripts": {

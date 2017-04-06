@@ -81,3 +81,8 @@ Update: ``` RSGProgressBar ```
 * 2.0.12 <br>
 YouTube tutorial - [https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x) </br>
 Please subscribe for my channel: [http://youtube.com/c/RadiCho](http://youtube.com/c/RadiCho)
+
+* 2.0.13 <br>
+``` RSGCheckbox ``` <br> ![Checkbox image](https://raw.githubusercontent.com/Devs123/rsg-components/master/images/Checkboxes.png)
+<br> You can use this http://codepen.io/radicho/pen/jBJjPb without ```rsg-components``` More info:
+https://medium.com/@radicho/customized-checkboxes-9190f969b681

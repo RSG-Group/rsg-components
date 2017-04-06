@@ -6,3 +6,4 @@ exports.RSGLabel = require('./lib/RSGLabel');
 exports.RSGFormBasic = require('./lib/RSGFormBasic');
 exports.RSGTransition = require('./lib/RSGTransition');
 exports.RSGProgressBar = require('./lib/RSGProgressBar');
+exports.RSGCheckbox = require('./lib/RSGCheckbox');
