@@ -1,6 +1,6 @@
 {
   "name": "rsg-components",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "Some React.js components with beautiful styles and modified props",
   "main": "rsg-components.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Devs123/rsg-components"
+    "url": "https://github.com/RSG-Group/rsg-components"
   },
   "author": "RSG",
   "dependencies": {
