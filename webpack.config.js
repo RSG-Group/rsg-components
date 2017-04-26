@@ -4,10 +4,10 @@ var webpack = require('webpack');
 module.exports = {
   context: __dirname,
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./lib/scripts.js",
+  entry: "./docs/scripts/index.js",
   output: {
-    path: __dirname + "/lib",
-    filename: "rsg-components.js"
+    path: __dirname + "/docs/scripts",
+    filename: "index.min.js"
   },
   module: {
     loaders: [
