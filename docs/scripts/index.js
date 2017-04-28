@@ -13,7 +13,7 @@ class IndexPage extends Component {
         Get started with React - https://facebook.github.io/react/docs, view on GitHub: https://github.com/facebook/react <br/>
         <h2>Example:</h2>
         <div id="example1">
-          <b>rsg-components <i>v2.0.13</i></b> <RSGLabel labelType={`s`}>stable</RSGLabel> <RSGBox>In this version was added RSGCheckbox component</RSGBox>
+          <b>rsg-components <i>v2.0.13</i></b> <RSGLabel labelType={`s`}>stable</RSGLabel>
         </div>
       </div>
     );
