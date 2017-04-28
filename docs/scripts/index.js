@@ -5,10 +5,7 @@ class IndexPage extends Component {
   render(){
     return(
       <div>
-        <h1>Hello to rsg-components - React.js components with beautiful styles and modified props!</h1>
-        <div>
-          <h1>Get started!</h1>
-        </div>
+        <h1>Hello to rsg-components!</h1>
       </div>
     );
   }
