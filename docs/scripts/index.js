@@ -1,41 +1,29 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import RSGLabel from "../../lib/RSGLabel";
-import RSGBox from "../../lib/RSGBox";
-import RSGCheckbox from "../../lib/RSGCheckbox";
+import Example from './example-1';
 
 class IndexPage extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      checked: false,
-      status: "Status missing"
-    }
-  }
-
-  __handleChange(){
-    this.setState({ checked: !this.state.checked });
-    if(!this.state.checked){
-      this.setState({ status: "If you have problems, please report an issue on Github" });
-    }else{
-      this.setState({ status: "No problems" });
-    }
-  }
-
   render(){
     return(
       <div>
         <h1>
           Hello to rsg-components! Cool front-end framework built for <a href="https://facebook.github.io/react/">React.js</a><br/>
         </h1>
+        <h2>What's inside <code>rsg-components</code>?</h2>
+        <ul>
+          <li>
+            Beautiful components, like <a href="https://github.com/RSG-Group/rsg-components/wiki/RSGButton">RSGButton</a>, <a href="https://github.com/RSG-Group/rsg-components/wiki/RSGLabel">RSGLabel</a> and others
+          </li>
+          <li>Modified props</li>
+          <li>And cool functions, like <a href="https://github.com/RSG-Group/rsg-components/wiki/RSGTransition">RSGTransition()</a></li>
+        </ul>
+        <hr/>
         Get started with React - https://facebook.github.io/react/docs, view on GitHub: https://github.com/facebook/react <br/>
-        <h2>Example:</h2>
-        <div id="example1">
-          <b>rsg-components <i>v2.0.13</i></b> <RSGLabel labelType={`s`}>stable</RSGLabel><br/>
-          Any problems? <RSGCheckbox onChange={this.__handleChange.bind(this)}/> <br/>
-          <b>Status:</b> { this.state.status }
-        </div>
-        Here we use <code>RSGLabel</code> and <code>RSGCheckbox</code> from <code>rsg-components</code> 
+        <h2>Component transform</h2>
+        View how <code>rsg-components</code> transform the new components to standart <code>React</code> and <code>HTML</code> components <a href="./pages/transforming.html">here</a>
+        
+        <h2>Example with <code>rsg-components</code>:</h2>
+        <Example/>
       </div>
     );
   }
