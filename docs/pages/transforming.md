@@ -6,7 +6,7 @@ layout: default
 Let's view what's happening when you use rsg-components
 
 rsg-components:
-```javascript
+```babel
 <RSGButton style={ANY-STYLES}>Click here</RSGButton>
 ```
 React
