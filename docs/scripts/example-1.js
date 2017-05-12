@@ -37,6 +37,8 @@ export default class Example extends Component{
 import ReactDOM from "react-dom";
 import { RSGLabel, RSGBox, RSGCheckbox } from "../../lib/RSGLabel";`}
         </code></pre>
+        You can use <code>require</code> (when you developing without es6)
+
         Returned code in the render method of the react class:
         <pre><code>
 {`<div id="example1">
