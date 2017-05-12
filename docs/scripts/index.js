@@ -18,7 +18,7 @@ class IndexPage extends Component {
           <li>And cool functions, like <a href="https://github.com/RSG-Group/rsg-components/wiki/RSGTransition">RSGTransition()</a></li>
         </ul>
         <hr/>
-        Get started with React - https://facebook.github.io/react/docs, view on GitHub: https://github.com/facebook/react <br/>
+        Get started with <a href="https://facebook.github.io/react/docs">React</a>. View <a href="https://github.com/facebook/react">on GitHub</a> <br/>
         <h2>Component transform</h2>
         View how <code>rsg-components</code> transform the new components to standart <code>React</code> and <code>HTML</code> components <a href="./pages/transforming.html">here</a>
         
