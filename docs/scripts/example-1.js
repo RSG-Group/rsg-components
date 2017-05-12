@@ -68,7 +68,7 @@ import { RSGLabel, RSGBox, RSGCheckbox } from "../../lib/RSGLabel";`}
   }
 }`}
         </code></pre>
-        Put this into the <code>head</code> of your <code>HTML</code> file (<a href="../pages/checkbox-css.html">Learn more</a>)
+        Put this into the <code>head</code> of your <code>HTML</code> file (<a href="pages/checkbox-css.html">Learn more</a>)
         <pre><code>
 {`<link rel="stylesheet" href="./scripts/checkbox.css">`}
         </code></pre>
