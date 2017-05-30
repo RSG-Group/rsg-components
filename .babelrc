@@ -1,8 +1,11 @@
 {
-  "presets": [
-    ["env", {
-      modules: false
-    }], "react"
-  ],
+  "presets": [["env", {
+    "targets": {
+      "browsers": [
+        "Firefox > 31",
+        "Chrome > 37"
+      ]
+    }
+  }], "react"],
   "plugins": ["babel-plugin-transform-react-remove-prop-types"]
 }
