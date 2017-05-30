@@ -10,10 +10,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-export { RSGBox } from "./lib/RSGBox";
-export { RSGButton } from "./lib/RSGButton";
-export { RSGLabel } from "./lib/RSGLabel";
-export { RSGFormBasic } from "./lib/RSGFormBasic";
-export { RSGTransition } from "./lib/RSGTransition";
-export { RSGProgressBar } from "./lib/RSGProgressBar";
-export { RSGCheckbox } from "./lib/RSGCheckbox";
+export RSGBox from "./src/RSGBox";
+export RSGButton from "./src/RSGButton";
+export RSGLabel from "./src/RSGLabel";
+export RSGFormBasic from "./src/RSGFormBasic";
+export RSGTransition from "./src/RSGTransition";
+export RSGProgressBar from "./src/RSGProgressBar";
+export RSGCheckbox from "./src/RSGCheckbox";
