@@ -1,2 +1,4 @@
 node_modules/
-debug.log
+npm-debug.log
+index.min.js
+index.min.js.map

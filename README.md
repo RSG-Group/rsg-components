@@ -1,21 +1,25 @@
-# Hello in rsg-components #
+# RSG-Components #
 
-* Install <br>
+* Install via npm.
 ```
 npm install rsg-components
 ```
-or <br>
+Install via yarn, a futuristic package manager.
 ```
-npm install rsg-components@version
+yarn add rsg-components
 ```
-or <br>
+or clone the repository!
 ```
 git clone https://github.com/RSG-Group/rsg-components
-``` 
+```
 
-# YouTube tutorial: #
-[Click here or on the image for youtube tutorial](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x): </br> [![tutorial](images/tutorial.png)](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x) </br>
-### Plase subscribe: </br> [![click here](images/channel.png)](https://www.youtube.com/c/RadiCho)
+# Tutorial on YouTube
+[Click here:](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x)
+
+[![tutorial](images/tutorial.png)](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x)
+
+### Please subscribe if you liked the videos: </br>
+ [![click here](images/channel.png)](https://www.youtube.com/c/RadiCho)
 
 ### How to use: ###
 ```
@@ -80,7 +84,7 @@ Update: ``` RSGProgressBar ```
 
 * 2.0.12 <br>
 YouTube tutorial - [https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x) </br>
-Please subscribe for my channel: [http://youtube.com/c/RadiCho](http://youtube.com/c/RadiCho)
+Please subscribe to my channel: [http://youtube.com/c/RadiCho](http://youtube.com/c/RadiCho)
 
 * 2.0.13 <br>
 ``` RSGCheckbox ``` <br> ![Checkbox image](https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Checkboxes.png)
