@@ -26,7 +26,7 @@ module.exports = {
     library: "RSGComponents",
     libraryTarget: "umd",
   },
-  externals: generateExternals(["react", "react-dom", "lodash"]),
+  externals: generateExternals(["react", "react-dom", "lodash", "aphrodite"]),
   module: {
     loaders: [
       {
