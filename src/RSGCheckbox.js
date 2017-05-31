@@ -11,10 +11,8 @@ type Props = {
 
 // Our beautiful little component.
 export default function RSGCheckbox(props: Props): React.createElement {
-  const classes: Array<string> = ["switch"];
   let classy = "switch";
   if (props.RSGType === "lg") {
-    classes.push("switch-lg");
     classy += " switch-lg";
   }
 
