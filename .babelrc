@@ -1,5 +1,5 @@
 {
-  "presets": [["env", {
+  "presets": ["react", ["env", {
     "targets": {
       "browsers": [
         "Firefox > 31",
@@ -7,6 +7,5 @@
       ]
     },
     "modules": false
-  }], "react"],
-  "plugins": ["babel-plugin-transform-react-remove-prop-types"]
+  }], "stage-0"]
 }

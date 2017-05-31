@@ -1,67 +1,62 @@
+// @flow
+// Imports go here.
 import React from "react";
 import { omit } from "lodash";
-import PropTypes from "prop-types";
+import { StyleSheet, css } from "aphrodite";
 
-export default function RSGButton(props) {
-  var RSGStyle = {};
-  RSGStyle.fontSize = props.fontSize;
+// Define the props and types our app needs.
+type Props = {
+  background?: string,
+  color?: string,
+  fontSize?: string,
+  fontStyle?: string,
+  opacity?: string,
+  style?: Object,
+  children: Array<React.createElement>,
+  sizes: string, // If you face a bug saying sizes is compulsory with flow, pass anything as sizes.
+  // This was done to avoid errors later in the component.
+};
 
-  switch (props.sizes) {
-  case "s":
-    RSGStyle.padding = "1px 3px";
-    RSGStyle.fontSize = "12px";
-    break;
-  case "l":
-    RSGStyle.padding = "5px 7px";
-    RSGStyle.fontSize = "18px";
-    break;
-  case "xl":
-    RSGStyle.padding = "9px 11px";
-    RSGStyle.fontSize = "20px";
-    break;
-  case "xxl":
-    RSGStyle.padding = "12px 14px";
-    RSGStyle.fontSize = "25px";
-    break;
-  default:
-    RSGStyle.padding = "5px 4px";
-  }
+// Create stylesheet of sizes.
+const styles: Object = StyleSheet.create({
+  s: { padding: "1px 3px", fontSize: "12px" },
+  l: { padding: "5px 7px", fontSize: "18px" },
+  xl: { padding: "9px 11px", fontSize: "20px" },
+  xxl: { padding: "12px 14px", fontSize: "25px" },
+  default: { padding: "5px 4px", fontSize: "16px" },
+});
 
-  RSGStyle.background = props.background;
-  RSGStyle.color = props.color;
-  RSGStyle.opacity = props.opacity;
-  RSGStyle.border = "1px solid rgb(30, 100, 160)";
-  RSGStyle.borderRadius = "3px";
-  RSGStyle = Object.assign(RSGStyle, props.style);
+// Finally.. our component.
+export default function RSGButton(props: Props): React.createElement {
+  const RSGStyle: Object = StyleSheet.create({
+    RSGStyle: {
+      border: "1px solid rgb(30, 100, 160)",
+      borderRadius: "3px",
+      background: props.background,
+      color: props.color,
+      opacity: props.opacity,
+      ...props.style,
+      fontSize: props.fontSize,
+      fontStyle: props.fontStyle,
+    },
+  });
 
-  if (props.fontStyle) RSGStyle.fontStyle = props.fontStyle;
+  const sizeId: string = props.sizes in ["s", "l", "xl", "xxl"] ? props.sizes : "default";
 
   return (
-    <button style={RSGStyle} {...omit(props, ["style"])}>
-      ...props.children
+    <button className={css(styles[sizeId], RSGStyle.RSGStyle)} {...omit(props, ["style"])}>
+      {props.children}
     </button>
   );
 }
 
-
-RSGButton.propTypes = {
-  background: PropTypes.string,
-  color: PropTypes.string,
-  fontSize: PropTypes.string,
-  fontStyle: PropTypes.string,
-  opacity: PropTypes.string,
-  style: PropTypes.shape({}),
-  // eslint-disable-next-line react/no-unused-prop-types
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  sizes: PropTypes.string,
-};
-
+// and sir default props.
 RSGButton.defaultProps = {
   background: "rgb(50, 120, 180)",
   color: "rgb(220, 220, 220)",
   opacity: "1",
   style: {},
-  fontSize: "16px",
+  fontSize: undefined,
   fontStyle: undefined,
   sizes: "default",
 };

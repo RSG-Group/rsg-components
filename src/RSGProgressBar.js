@@ -1,11 +1,20 @@
+// @flow weak
 /* eslint-disable no-console */
 import React from "react";
-import PropTypes from "prop-types";
 
-var txt = "Initializing";
-var style = "";
+let txt = "Initializing";
+let style = "";
 
-export default function RSGProgressBar(props) {
+type Props = {
+  anim?: boolean,
+  id: string,
+  checkered?: boolean | string,
+  children: Array<React.createElement>,
+  text: string,
+  progressCount: number,
+};
+
+export default function RSGProgressBar(props: Props) {
   if (!props.anim && !props.progressCount && typeof props.progressCount !== "number") {
     return <div><b style={{ color: "red" }}>You MUST set progressCount prop as number!!!</b></div>;
   }
@@ -25,16 +34,16 @@ export default function RSGProgressBar(props) {
     console.error("Please set only text for children");
   }
 
-  txt = props.children && props.children.trim() ?
-    `${props.children} ${props.progressCount}% ${txt2}`
+  txt = props.children.length > 0 ?
+    `${props.progressCount}% ${txt2}`
     : `${props.progressCount}% ${txt2}`;
   const PPwidth = `${props.progressCount}%`;
 
   if (props.anim === true && props.children) {
-    console.warning("Now you are in \"anim\"-mode. Move your \"children\" to arguments in anim() function !!!");
+    console.error("Now you are in \"anim\"-mode. Move your \"children\" to arguments in anim() function !!!");
   }
 
-  const DIVProps = Object.assign({ className: "RSGProgressBar", key: 5 }, props);
+  const DIVProps = { className: "RSGProgressBar", key: 5, ...props };
   style += " .PP{ overflow: hidden; }";
 
 
@@ -43,22 +52,12 @@ export default function RSGProgressBar(props) {
       <style key={1}>{style}</style>
       <div {...DIVProps}>
         <div className="PP" id={`${props.id}SPAN`} style={{ width: PPwidth }} key={3}>
-          {txt}
+          {props.children}{txt}
         </div>
       </div>
     </div>
   );
 }
-
-
-RSGProgressBar.propTypes = {
-  anim: PropTypes.bool,
-  id: PropTypes.string.isRequired,
-  checkered: PropTypes.oneOf([true, false, "animated"]),
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  text: PropTypes.string.isRequired,
-  progressCount: PropTypes.number.isRequired,
-};
 
 RSGProgressBar.defaultProps = {
   anim: false,

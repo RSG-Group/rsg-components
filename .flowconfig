@@ -1,0 +1,18 @@
+[ignore]
+# Following packages to be ignored due to type errors.
+.*/node_modules/eslint-plugin-jsx-a11y/.*
+
+# Minor ignores.
+.*/node_modules/aphrodite/src/inject.js.*
+.*/node_modules/aphrodite/src/exports.js.*
+.*/node_modules/aphrodite/src/no-important.js.*
+.*/node_modules/babel-plugin-transform-react-remove-prop-types/src/index.js.*
+
+[include]
+
+[libs]
+
+[options]
+emoji=true
+suppress_comment= \\(.\\|\n\\)*\\flow-disable-next-line
+unsafe.enable_getters_and_setters=true
