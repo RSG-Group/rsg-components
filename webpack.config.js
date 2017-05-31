@@ -18,10 +18,10 @@ function generateExternals(externals) {
 module.exports = {
   target: "web",
   devtool: "source-map",
-  entry: "./index.js",
+  entry: "./src/index.js",
   output: {
     path: __dirname,
-    filename: "index.min.js",
+    filename: "index.js",
     sourceMapFilename: "[file].map",
     library: "RSGComponents",
     libraryTarget: "umd",

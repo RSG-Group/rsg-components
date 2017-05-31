@@ -5,7 +5,8 @@
         "Firefox > 31",
         "Chrome > 37"
       ]
-    }
+    },
+    "modules": false
   }], "react"],
   "plugins": ["babel-plugin-transform-react-remove-prop-types"]
 }
