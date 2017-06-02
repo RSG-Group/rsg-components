@@ -41,7 +41,9 @@ export default function RSGButton(props: Props): React.createElement {
     },
   });
 
-  const sizeId: string = props.sizes in ["s", "l", "xl", "xxl"] ? props.sizes : "default";
+  let sizeId: string;
+  if (props.sizes) sizeId = props.sizes;
+  else { sizeId = "default" };
 
   return (
     <button className={css(styles[sizeId], RSGStyle.RSGStyle)} {...omit(props, ["style"])}>
