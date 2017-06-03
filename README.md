@@ -28,7 +28,7 @@ git clone https://github.com/RSG-Group/rsg-components
 
 View all components, props and styles on GitHub wiki page: [https://github.com/RSG-Group/rsg-components/wiki/](https://github.com/RSG-Group/rsg-components/wiki/)
 
-### Versions: ###
+### Changelog: ###
 * 1.1.3 <br>
 Versions 1.1.3 or previous are tests and have bugs
 
