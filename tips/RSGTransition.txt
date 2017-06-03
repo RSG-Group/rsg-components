@@ -1,5 +1,0 @@
-If you don't want to set type don't set third argument 
-Example: RSGTransition("background", "5s") - without type 
-Actually type will be set to ease by default 
-style = "background", time = "5s", type = "ease" 
-That works, because in sources there is type = "" - RSGTransition(style, time, type = "ease");
