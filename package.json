@@ -16,10 +16,14 @@
   },
   "author": "RSG",
   "dependencies": {
-    "aphrodite": "^1.2.1",
-    "lodash": "^4.17.4"
+    "fela": "^5.0.1",
+    "lodash": "^4.17.4",
+    "react-fela": "^5.0.2"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.66",
+    "@types/react": "^15.0.28",
+    "@types/rollup": "^0.41.0",
     "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-babili": "^0.1.2",

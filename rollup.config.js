@@ -11,7 +11,7 @@ const config = {
   plugins: [resolve(), commonjs({
     include: "node_modules/**",
   }), babel({ plugins: ["external-helpers"], presets: ["babili"] })],
-  external: ["lodash", "react", "aphrodite"],
+  external: ["lodash", "react", "fela", "react-fela"],
   sourceMap: true,
 };
 
@@ -22,7 +22,7 @@ rollup(pick(config, ["entry", "plugins", "external"])).then((bundle) => {
     sourceMap: true,
     format: "umd",
     moduleName: "RSGComponents",
-    globals: { lodash: "_", react: "React", aphrodite: "Aphrodite" },
+    globals: { lodash: "_", react: "React", fela: "fela", "react-fela": "react-fela" },
   });
 });
 
