@@ -1,7 +1,7 @@
 // @flow
 import React from "react";
 import { omit } from "lodash";
-import { createComponent } from "react-fela";
+import { StyleSheet, css } from "aphrodite-jss";
 
 type Props = {
   children: Array<React.createElement>,
@@ -12,19 +12,7 @@ type Props = {
 };
 
 export default function RSGLabel(props: Props) {
-  const styles = prop => ({
-    ...props.style,
-    color: props.color,
-    fontFamily: "monospace",
-    fontSize: ".975em",
-    padding: ".175em .3em",
-    borderRadius: ".235em",
-    background: prop.background ? prop.background : "rgb(195, 195, 195)",
-    opacity: props.opacity,
-  });
-
   let background = false;
-
   switch (props.labelType) {
   case "de":
     // This has already been configured in the style sheet, hence commented for optimization.
@@ -44,16 +32,21 @@ export default function RSGLabel(props: Props) {
     // background = "rgb(195, 195, 195)";
   }
 
-  const mainSpan = createComponent(styles, "span", () => {
-    const a = Object.keys(props);
-    a.shift();
-    return a;
+  const styles = StyleSheet.create({
+    ...props.style,
+    color: props.color,
+    fontFamily: "monospace",
+    fontSize: ".975em",
+    padding: ".175em .3em",
+    borderRadius: ".235em",
+    background: background || "rgb(195, 195, 195)",
+    opacity: props.opacity,
   });
 
   return (
-    <mainSpan background={background} {...omit(props, ["style", "labelType"])}>
+    <span className={css(styles.mainSpan)} {...omit(props, ["style", "labelType"])}>
       {props.children}
-    </mainSpan>
+    </span>
   );
 }
 

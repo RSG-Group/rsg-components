@@ -6,12 +6,11 @@ import { pick } from "lodash";
 
 const config = {
   entry: "src/index.js",
-  dest: "index.esm.js",
   format: "es",
   plugins: [resolve(), commonjs({
     include: "node_modules/**",
   }), babel({ plugins: ["external-helpers"], presets: ["babili"] })],
-  external: ["lodash", "react", "fela", "react-fela"],
+  external: ["lodash", "react", "aphrodite-jss", "aphrodite"],
   sourceMap: true,
 };
 
@@ -22,7 +21,12 @@ rollup(pick(config, ["entry", "plugins", "external"])).then((bundle) => {
     sourceMap: true,
     format: "umd",
     moduleName: "RSGComponents",
-    globals: { lodash: "_", react: "React", fela: "fela", "react-fela": "react-fela" },
+    globals: {
+      lodash: "_",
+      react: "React",
+      "aphrodite-jss": "aphrodite-jss",
+      aphrodite: "aphrodite",
+    },
   });
 });
 

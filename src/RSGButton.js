@@ -2,7 +2,7 @@
 // Imports go here.
 import React from "react";
 import { omit } from "lodash";
-import { createComponent } from "react-fela";
+import { StyleSheet, css } from "aphrodite-jss";
 
 // Define the props and types our app needs.
 type Props = {
@@ -31,11 +31,11 @@ export default function RSGButton(props: Props): React.createElement {
   let sizeId: string;
   if (props.sizes) sizeId = props.sizes;
   else { sizeId = "default"; }
+  let padding = "5px 4px";
+  if (sizeId !== "default") padding = sizes[sizeId]().padding;
 
-  const styles: Object = () => {
-    let padding = "5px 4px";
-    if (sizeId !== "default") padding = sizes[sizeId]().padding;
-    return {
+  const styles: Object = StyleSheet.create({
+    mainButton: {
       border: "1px solid rgb(30, 100, 160)",
       borderRadius: "3px",
       background: props.background,
@@ -45,15 +45,13 @@ export default function RSGButton(props: Props): React.createElement {
       ...props.style,
       fontSize: props.fontSize ? props.fontSize : sizes[sizeId]().fontSize,
       fontStyle: props.fontStyle,
-    };
-  };
-
-  const StyledButton = createComponent(styles, "button");
+    },
+  });
 
   return (
-    <StyledButton {...omit(props, ["style"])} passThrough={Object.keys(props)}>
+    <button className={css(styles.mainButton)} {...omit(props, ["style"])} >
       {props.children}
-    </StyledButton>
+    </button>
   );
 }
 

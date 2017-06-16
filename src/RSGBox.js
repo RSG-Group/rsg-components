@@ -2,7 +2,7 @@
 // Imports come here.
 import React from "react";
 import { omit } from "lodash";
-import { createComponent } from "react-fela";
+import { StyleSheet, css } from "aphrodite-jss";
 
 // Define the types of our props.
 type Props = {
@@ -17,8 +17,8 @@ type Props = {
 // Our little component.
 export default function RSGBox(props: Props): React.createElement {
   // Create our styles.
-  const styles: Object = () => ({
-    mainDiv: () => ({
+  const styles: Object = StyleSheet.create({
+    mainDiv: {
       // height: "20px",     // Requires reconfirmation.
       height: props.height,
       color: props.color,
@@ -27,23 +27,21 @@ export default function RSGBox(props: Props): React.createElement {
       background: "rgb(230, 230, 230)",
       fontFamily: "Verdana, Geneva, sans-serif",
       ...props.style,
-    }),
-    mainSpan: () => ({
+    },
+    mainSpan: {
       marginLeft: "15px",
       fontSize: "13.5px",
       verticalAlign: "middle",
-    }),
+    },
   });
 
-  const mainDiv = createComponent(styles.mainDiv);
-  const mainSpan = createComponent(styles.mainSpan, "span");
 
   return (
-    <mainDiv {...omit(props, ["style"])} passThrough={Object.keys(props)}>
-      <mainSpan>
+    <div className={css(styles.mainDiv)} {...omit(props, ["style"])}>
+      <span className={css(styles.mainSpan)}>
         {props.children}
-      </mainSpan>
-    </mainDiv>
+      </span>
+    </div>
   );
 }
 

@@ -5,9 +5,10 @@
   "main": "index.js",
   "module": "index.esm.js",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "lint": "eslint .",
-    "prepublish": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js -o index.esm.js",
+    "build-example": "rollup -c rollup.config.js -o example/imports/rsg-components.js",
+    "lint": "flow check && eslint .",
+    "prepublish": "rollup -c rollup.config.js -o index.esm.js"
   },
   "license": "Apache-2.0",
   "repository": {
@@ -16,9 +17,8 @@
   },
   "author": "RSG",
   "dependencies": {
-    "fela": "^5.0.1",
-    "lodash": "^4.17.4",
-    "react-fela": "^5.0.2"
+    "aphrodite-jss": "^1.1.1",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.66",
@@ -27,8 +27,8 @@
     "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-babili": "^0.1.2",
-    "babel-preset-env": "^1.5.1",
-    "babel-preset-react": "^6.11.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
@@ -36,7 +36,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "flow-bin": "^0.47.0",
-    "react": "^15.5.4",
+    "react": "^15.6.1",
     "rollup": "^0.41.6",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",

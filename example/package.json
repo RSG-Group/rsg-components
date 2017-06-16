@@ -1,0 +1,19 @@
+{
+  "name": "example",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "aphrodite-jss": "^1.1.1",
+    "babel-runtime": "^6.20.0",
+    "lodash": "^4.17.4",
+    "meteor-node-stubs": "~0.2.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1"
+  }
+}
