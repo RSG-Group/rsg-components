@@ -20,10 +20,9 @@ export default function RSGBox(props: Props): React.createElement {
   // Create our styles.
   const styles: Object = StyleSheet.create({
     mainDiv: {
-      // height: "20px",     // Requires reconfirmation.
-      height: props.height,
+      height: props.height ? props.width : undefined,
       color: props.color,
-      width: props.width,
+      width: props.width ? props.width : undefined,
       opacity: props.opacity,
       background: "rgb(230, 230, 230)",
       fontFamily: "Verdana, Geneva, sans-serif",
