@@ -2,16 +2,17 @@
 // Imports come here.
 import React from "react";
 import { omit } from "lodash";
-import { StyleSheet, css } from "aphrodite-jss";
+// flow-disable-next-line because aphrodite is aliased to aphrodite-jss.
+import { StyleSheet, css } from "aphrodite";
 
 // Define the types of our props.
 type Props = {
-  color?: string, // eslint-disable-line react/no-unused-prop-types
-  width?: string, // eslint-disable-line react/no-unused-prop-types
+  color?: string,
+  width?: string,
   children: Array<React.createElement>,
   style?: {},
-  opacity?: string, // eslint-disable-line react/no-unused-prop-types
-  height: string, // eslint-disable-line react/no-unused-prop-types
+  opacity?: string,
+  height: string,
 };
 
 // Our little component.

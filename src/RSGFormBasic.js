@@ -1,6 +1,7 @@
 // @flow
 import React from "react";
-import { StyleSheet, css } from "aphrodite-jss";
+// flow-disable-next-line because aphrodite is aliased to aphrodite-jss.
+import { StyleSheet, css } from "aphrodite";
 
 export default function RSGFormBasic(props: {}): React.createElement {
   const styles: Object = StyleSheet.create({

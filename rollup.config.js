@@ -1,6 +1,7 @@
 import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import babel from "rollup-plugin-babel";
+import alias from "rollup-plugin-alias";
 import { rollup } from "rollup";
 import { pick } from "lodash";
 
@@ -9,9 +10,12 @@ const config = {
   format: "es",
   plugins: [resolve(), commonjs({
     include: "node_modules/**",
-  }), babel({ plugins: ["external-helpers"], presets: ["babili"] })],
+  }), babel({ plugins: ["external-helpers"], presets: ["babili"] }), alias({
+    aphrodite: "./node_modules/aphrodite-jss/lib/index",
+  })],
   external: ["lodash", "react", "aphrodite-jss", "aphrodite"],
   sourceMap: true,
+  dest: "index.esm.js",
 };
 
 

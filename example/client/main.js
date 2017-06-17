@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types,import/first */
 // Import MongoDB adapter.
 import { Mongo } from "meteor/mongo";
+import { Meteor } from "meteor/meteor";
 // Our database.
+const data = Meteor.subscribe("data"); // eslint-disable-line no-unused-vars
 const Database = new Mongo.Collection("database");
 Database.insert({ username: "mongoo", password: "dbbb" });
 // Import RSGComponents and React.
@@ -53,6 +55,10 @@ class App extends Component {
   }
 
   render() {
+    const string = `Username in state: ${this.state.username} /
+     Password in state: ${this.state.password} /
+     Username on database: ${this.props.db.toString()} /
+     Password on database: ${this.props.db.toString()}`;
     return (
       <div>
         <RSGFormBasic
@@ -61,9 +67,8 @@ class App extends Component {
         />
         <RSGButton onClick={this.handleClick}>Submit</RSGButton>
         <br />
-        <RSGBox>
-          {`Username on server: ${this.props.db} /
-          Password on server: ${this.props.db}`}
+        <RSGBox height={50}>
+          {string}
         </RSGBox>
         <RSGLabel labelType="s">Database in sync with server.</RSGLabel>
       </div>
