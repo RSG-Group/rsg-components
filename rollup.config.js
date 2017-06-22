@@ -15,13 +15,13 @@ const config = {
   })],
   external: ["lodash", "react", "aphrodite-jss", "aphrodite"],
   sourceMap: true,
-  dest: "index.esm.js",
+  dest: "lib/index.esm.js",
 };
 
 
 rollup(pick(config, ["entry", "plugins", "external"])).then((bundle) => {
   bundle.write({
-    dest: "index.js",
+    dest: "lib/index.js",
     sourceMap: true,
     format: "umd",
     moduleName: "RSGComponents",

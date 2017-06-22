@@ -1,6 +1,7 @@
 [ignore]
 # Following packages to be ignored due to type errors.
 .*/node_modules/eslint-plugin-jsx-a11y/.*
+.*/node_modules/stylelint/lib/.*
 
 # Minor ignores.
 

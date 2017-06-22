@@ -1,6 +1,6 @@
 # RSG-Components #
 
-* Install via npm.
+Install via npm.
 ```
 npm install rsg-components
 ```
@@ -12,6 +12,14 @@ or clone the repository!
 ```
 git clone https://github.com/RSG-Group/rsg-components
 ```
+
+# Compatability
+- Firefox > 31
+- Chrome > 37
+- IE < 11 unsupported.
+- Versions of Safari newer than 2014-15 supported.
+- Microsoft Edge supported.
+- Opera versions which use Blink are supported.
 
 # Tutorial on YouTube
 [Click here:](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x)

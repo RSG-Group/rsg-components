@@ -15,7 +15,7 @@ import { StyleSheet, css } from "aphrodite-jss";
 import { RSGButton, RSGBox, RSGLabel } from "../imports/rsg-components";
 
 const RSGFormBasic = (props) => {
-  const styles: Object = StyleSheet.create({
+  const styles = StyleSheet.create({
     inputStyle: {
       border: "1px solid rgb(128, 128, 128)",
       borderRadius: "3.5px",
