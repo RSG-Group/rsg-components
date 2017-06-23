@@ -8,7 +8,7 @@
       "dev": true
     },
     "@types/aphrodite": {
-      "version": "0.5.5",
+      "version": "0.5.6",
       "dev": true
     },
     "@types/estree": {
@@ -20,7 +20,7 @@
       "dev": true
     },
     "@types/react": {
-      "version": "15.0.30",
+      "version": "15.0.31",
       "dev": true
     },
     "@types/rollup": {
@@ -1012,7 +1012,7 @@
       "dev": true
     },
     "eslint-plugin-import": {
-      "version": "2.5.0",
+      "version": "2.6.0",
       "dev": true,
       "dependencies": {
         "doctrine": {
@@ -2033,14 +2033,8 @@
       "dev": true,
       "dependencies": {
         "string_decoder": {
-          "version": "1.0.2",
-          "dev": true,
-          "dependencies": {
-            "safe-buffer": {
-              "version": "5.0.1",
-              "dev": true
-            }
-          }
+          "version": "1.0.3",
+          "dev": true
         }
       }
     },

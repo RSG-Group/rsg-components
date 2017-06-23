@@ -1,8 +1,7 @@
 // @flow
 import React from "react";
 import { omit } from "lodash";
-// flow-disable-next-line because aphrodite is aliased to aphrodite-jss.
-import { StyleSheet, css } from "aphrodite";
+import { StyleSheet, css } from "aphrodite-jss";
 
 type Props = {
   children: Array<React.createElement>,
@@ -34,14 +33,16 @@ export default function RSGLabel(props: Props) {
   }
 
   const styles = StyleSheet.create({
-    ...props.style,
-    color: props.color,
-    fontFamily: "monospace",
-    fontSize: ".975em",
-    padding: ".175em .3em",
-    borderRadius: ".235em",
-    background: background || "rgb(195, 195, 195)",
-    opacity: props.opacity,
+    mainSpan: {
+      ...props.style,
+      color: props.color,
+      fontFamily: "monospace",
+      fontSize: ".975em",
+      padding: ".175em .3em",
+      borderRadius: ".235em",
+      background: background || "rgb(195, 195, 195)",
+      opacity: props.opacity,
+    },
   });
 
   return (

@@ -66,10 +66,11 @@ class App extends Component {
           onField2Change={e => this.setState({ password: e })}
         />
         <RSGButton onClick={this.handleClick}>Submit</RSGButton>
-        <br />
+        <br /><br />
         <RSGBox height={50}>
           {string}
         </RSGBox>
+        <br />
         <RSGLabel labelType="s">Database in sync with server.</RSGLabel>
       </div>
     );

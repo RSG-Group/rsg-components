@@ -2,8 +2,7 @@
 // Imports go here.
 import React from "react";
 import { omit } from "lodash";
-// flow-disable-next-line because aphrodite is aliased to aphrodite-jss.
-import { StyleSheet, css } from "aphrodite";
+import { StyleSheet, css } from "aphrodite-jss";
 
 // Define the props and types our app needs.
 type Props = {
