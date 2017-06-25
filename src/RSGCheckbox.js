@@ -20,20 +20,9 @@ type Props = {
 
 // Our beautiful component.
 export default function RSGCheckbox(props: Props): React.createElement {
-  const classy = props.large ? "switch" : "switch switch-lg";
+  const classy = props.large ? " switch" : " switch switch-lg";
 
   const styles = StyleSheet.create({
-    "@global": {
-      ".switch input:checked + span": {
-        backgroundColor: "#5d9cec",
-        borderColor: "#5d9cec",
-        transition: "all 0.5s",
-      },
-      ".switch input:checked + span:after": {
-        left: "50%",
-        transition: "all 0.2s",
-      },
-    },
     mainSpan: {
       position: "relative",
       display: "inline-block",
@@ -70,13 +59,22 @@ export default function RSGCheckbox(props: Props): React.createElement {
       opacity: 0,
       position: "absolute",
       zIndex: -1,
+      "&:checked + $mainSpan": {
+        backgroundColor: "#5d9cec",
+        borderColor: "#5d9cec",
+        transition: "all 0.5s",
+      },
+      "&:checked + $mainSpan:after": {
+        left: "50%",
+        transition: "all 0.2s",
+      },
     },
   });
 
   const a = omit(this.props, ["className", "onChange"]);
 
   return (
-    <label className={/* css(styles.mainLabel) */classy} htmlFor="checkbox" style={props.style} {...a}>
+    <label className={css(styles.mainLabel) + classy} htmlFor="checkbox" style={props.style} {...a}>
       <input
         type="checkbox"
         onChange={props.onChange}
