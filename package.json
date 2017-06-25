@@ -6,7 +6,7 @@
   "module": "lib/index.esm.js",
   "scripts": {
     "build": "node-sass sass/index.scss lib/index.css && rollup -c rollup.config.js",
-    "build-example": "rollup -c rollup.config.js -o example/imports/rsg-components.js",
+    "build-example": "rollup -c rollup.config.js -o example/imports/rsg-components.js && node-sass sass/index.scss example/client/main.css",
     "lint": "stylelint \"sass/**/*.scss\" --fix && flow check && eslint .",
     "prepublish": "node-sass sass/index.scss lib/index.css && rollup -c rollup.config.js"
   },
@@ -18,10 +18,12 @@
   "author": "RSG",
   "dependencies": {
     "aphrodite-jss": "^1.1.1",
+    "jss": "^8.0.0",
+    "jss-preset-default": "^3.0.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "@types/aphrodite": "^0.5.5",
+    "@types/jss": "^0.6.27",
     "@types/lodash": "^4.14.66",
     "@types/react": "^15.0.29",
     "@types/rollup": "^0.41.0",

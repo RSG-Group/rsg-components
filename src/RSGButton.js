@@ -48,8 +48,10 @@ export default function RSGButton(props: Props): React.createElement {
     },
   });
 
+  const exclude = ["style", "background", "color", "fontSize", "fontStyle", "opacity", "sizes"];
+
   return (
-    <button className={css(styles.mainButton)} {...omit(props, ["style"])} >
+    <button className={css(styles.mainButton)} {...omit(props, exclude)} >
       {props.children}
     </button>
   );

@@ -12,6 +12,7 @@ const config = {
   }), babel({
     plugins: ["external-helpers"],
     presets: ["babili"],
+    exclude: "node_modules/**",
   })],
   external: ["lodash", "react", "aphrodite-jss", "aphrodite"],
   sourceMap: true,
