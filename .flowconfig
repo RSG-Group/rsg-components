@@ -17,5 +17,5 @@
 node_modules/jss/flow-typed
 [options]
 emoji=true
-suppress_comment= \\(.\\|\n\\)*\\(flow-disable-next-line|$FlowFixMe)
+suppress_comment= \\(.\\|\n\\)*\\(flow-disable-next-line\\|\\$FlowFixMe\\)
 unsafe.enable_getters_and_setters=true

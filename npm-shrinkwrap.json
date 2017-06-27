@@ -7,12 +7,12 @@
       "version": "4.0.2",
       "dev": true
     },
-    "@types/aphrodite": {
-      "version": "0.5.6",
-      "dev": true
-    },
     "@types/estree": {
       "version": "0.0.35",
+      "dev": true
+    },
+    "@types/jss": {
+      "version": "0.6.27",
       "dev": true
     },
     "@types/lodash": {
@@ -20,11 +20,11 @@
       "dev": true
     },
     "@types/react": {
-      "version": "15.0.31",
+      "version": "15.0.32",
       "dev": true
     },
     "@types/rollup": {
-      "version": "0.41.0",
+      "version": "0.41.1",
       "dev": true
     },
     "@types/source-map": {
@@ -62,7 +62,7 @@
       "dev": true
     },
     "ansi-escapes": {
-      "version": "1.4.0",
+      "version": "2.0.0",
       "dev": true
     },
     "ansi-regex": {
@@ -74,7 +74,45 @@
       "dev": true
     },
     "aphrodite-jss": {
-      "version": "1.1.1"
+      "version": "1.1.1",
+      "dependencies": {
+        "is-in-browser": {
+          "version": "1.0.2"
+        },
+        "jss": {
+          "version": "7.1.7"
+        },
+        "jss-camel-case": {
+          "version": "4.0.0"
+        },
+        "jss-compose": {
+          "version": "3.0.1"
+        },
+        "jss-default-unit": {
+          "version": "6.1.2"
+        },
+        "jss-expand": {
+          "version": "3.0.1"
+        },
+        "jss-extend": {
+          "version": "4.0.1"
+        },
+        "jss-global": {
+          "version": "1.0.1"
+        },
+        "jss-nested": {
+          "version": "4.0.1"
+        },
+        "jss-preset-default": {
+          "version": "2.0.0"
+        },
+        "jss-props-sort": {
+          "version": "4.0.0"
+        },
+        "jss-vendor-prefixer": {
+          "version": "5.1.0"
+        }
+      }
     },
     "aproba": {
       "version": "1.1.2",
@@ -89,7 +127,7 @@
       "dev": true
     },
     "aria-query": {
-      "version": "0.5.0",
+      "version": "0.7.0",
       "dev": true
     },
     "arr-diff": {
@@ -712,11 +750,11 @@
       "dev": true
     },
     "caniuse-db": {
-      "version": "1.0.30000693",
+      "version": "1.0.30000696",
       "dev": true
     },
     "caniuse-lite": {
-      "version": "1.0.30000693",
+      "version": "1.0.30000696",
       "dev": true
     },
     "caseless": {
@@ -732,7 +770,7 @@
       "dev": true
     },
     "cli-cursor": {
-      "version": "1.0.2",
+      "version": "2.1.0",
       "dev": true
     },
     "cli-width": {
@@ -838,10 +876,6 @@
     },
     "currently-unhandled": {
       "version": "0.4.1",
-      "dev": true
-    },
-    "d": {
-      "version": "1.0.0",
       "dev": true
     },
     "damerau-levenshtein": {
@@ -955,40 +989,12 @@
       "version": "1.1.1",
       "dev": true
     },
-    "es5-ext": {
-      "version": "0.10.23",
-      "dev": true
-    },
-    "es6-iterator": {
-      "version": "2.0.1",
-      "dev": true
-    },
-    "es6-map": {
-      "version": "0.1.5",
-      "dev": true
-    },
-    "es6-set": {
-      "version": "0.1.5",
-      "dev": true
-    },
-    "es6-symbol": {
-      "version": "3.1.1",
-      "dev": true
-    },
-    "es6-weak-map": {
-      "version": "2.0.2",
-      "dev": true
-    },
     "escape-string-regexp": {
       "version": "1.0.5",
       "dev": true
     },
-    "escope": {
-      "version": "3.6.0",
-      "dev": true
-    },
     "eslint": {
-      "version": "3.19.0",
+      "version": "4.1.1",
       "dev": true
     },
     "eslint-config-airbnb": {
@@ -1038,15 +1044,23 @@
         "read-pkg-up": {
           "version": "2.0.0",
           "dev": true
+        },
+        "strip-bom": {
+          "version": "3.0.0",
+          "dev": true
         }
       }
     },
     "eslint-plugin-jsx-a11y": {
-      "version": "5.0.3",
+      "version": "6.0.0",
       "dev": true
     },
     "eslint-plugin-react": {
       "version": "7.1.0",
+      "dev": true
+    },
+    "eslint-scope": {
+      "version": "3.7.1",
       "dev": true
     },
     "espree": {
@@ -1083,16 +1097,8 @@
       "version": "2.0.2",
       "dev": true
     },
-    "event-emitter": {
-      "version": "0.3.5",
-      "dev": true
-    },
     "execall": {
       "version": "1.0.0",
-      "dev": true
-    },
-    "exit-hook": {
-      "version": "1.1.1",
       "dev": true
     },
     "expand-brackets": {
@@ -1105,6 +1111,10 @@
     },
     "extend": {
       "version": "3.0.1",
+      "dev": true
+    },
+    "external-editor": {
+      "version": "2.0.4",
       "dev": true
     },
     "extglob": {
@@ -1130,7 +1140,7 @@
       }
     },
     "figures": {
-      "version": "1.7.0",
+      "version": "2.0.0",
       "dev": true
     },
     "file-entry-cache": {
@@ -1294,11 +1304,11 @@
       "dev": true
     },
     "hosted-git-info": {
-      "version": "2.4.2",
+      "version": "2.5.0",
       "dev": true
     },
     "html-tags": {
-      "version": "1.2.0",
+      "version": "2.0.0",
       "dev": true
     },
     "http-signature": {
@@ -1344,12 +1354,28 @@
       "dev": true
     },
     "inquirer": {
-      "version": "0.12.0",
-      "dev": true
-    },
-    "interpret": {
-      "version": "1.0.3",
-      "dev": true
+      "version": "3.1.1",
+      "dev": true,
+      "dependencies": {
+        "ansi-regex": {
+          "version": "3.0.0",
+          "dev": true
+        },
+        "is-fullwidth-code-point": {
+          "version": "2.0.0",
+          "dev": true
+        },
+        "string-width": {
+          "version": "2.1.0",
+          "dev": true,
+          "dependencies": {
+            "strip-ansi": {
+              "version": "4.0.0",
+              "dev": true
+            }
+          }
+        }
+      }
     },
     "invariant": {
       "version": "2.2.2",
@@ -1416,7 +1442,7 @@
       "dev": true
     },
     "is-in-browser": {
-      "version": "1.0.2"
+      "version": "1.1.3"
     },
     "is-module": {
       "version": "1.0.0",
@@ -1448,6 +1474,10 @@
     },
     "is-primitive": {
       "version": "2.0.0",
+      "dev": true
+    },
+    "is-promise": {
+      "version": "2.1.0",
       "dev": true
     },
     "is-property": {
@@ -1522,6 +1552,10 @@
       "dev": true,
       "optional": true
     },
+    "jschardet": {
+      "version": "1.4.2",
+      "dev": true
+    },
     "jsesc": {
       "version": "1.3.0",
       "dev": true
@@ -1567,37 +1601,37 @@
       "dev": true
     },
     "jss": {
-      "version": "7.1.7"
+      "version": "8.0.0"
     },
     "jss-camel-case": {
-      "version": "4.0.0"
+      "version": "5.0.0"
     },
     "jss-compose": {
-      "version": "3.0.1"
-    },
-    "jss-default-unit": {
-      "version": "6.1.2"
-    },
-    "jss-expand": {
-      "version": "3.0.1"
-    },
-    "jss-extend": {
-      "version": "4.0.1"
-    },
-    "jss-global": {
-      "version": "1.0.1"
-    },
-    "jss-nested": {
-      "version": "4.0.1"
-    },
-    "jss-preset-default": {
-      "version": "2.0.0"
-    },
-    "jss-props-sort": {
       "version": "4.0.0"
     },
+    "jss-default-unit": {
+      "version": "7.0.0"
+    },
+    "jss-expand": {
+      "version": "4.0.0"
+    },
+    "jss-extend": {
+      "version": "5.0.0"
+    },
+    "jss-global": {
+      "version": "2.0.0"
+    },
+    "jss-nested": {
+      "version": "5.0.0"
+    },
+    "jss-preset-default": {
+      "version": "3.0.0"
+    },
+    "jss-props-sort": {
+      "version": "5.0.0"
+    },
     "jss-vendor-prefixer": {
-      "version": "5.1.0"
+      "version": "6.0.0"
     },
     "jsx-ast-utils": {
       "version": "1.4.1",
@@ -1625,13 +1659,7 @@
     },
     "load-json-file": {
       "version": "1.1.0",
-      "dev": true,
-      "dependencies": {
-        "strip-bom": {
-          "version": "2.0.0",
-          "dev": true
-        }
-      }
+      "dev": true
     },
     "locate-path": {
       "version": "2.0.0",
@@ -1694,7 +1722,7 @@
       "dev": true
     },
     "mathml-tag-names": {
-      "version": "2.0.0",
+      "version": "2.0.1",
       "dev": true
     },
     "meow": {
@@ -1711,6 +1739,10 @@
     },
     "mime-types": {
       "version": "2.1.15",
+      "dev": true
+    },
+    "mimic-fn": {
+      "version": "1.1.0",
       "dev": true
     },
     "minimatch": {
@@ -1743,7 +1775,7 @@
       "version": "1.0.0"
     },
     "mute-stream": {
-      "version": "0.0.5",
+      "version": "0.0.7",
       "dev": true
     },
     "nan": {
@@ -1771,7 +1803,7 @@
       "dev": true
     },
     "normalize-package-data": {
-      "version": "2.3.8",
+      "version": "2.4.0",
       "dev": true
     },
     "normalize-path": {
@@ -1787,7 +1819,7 @@
       "dev": true
     },
     "npmlog": {
-      "version": "4.1.0",
+      "version": "4.1.2",
       "dev": true
     },
     "num2fraction": {
@@ -1823,7 +1855,7 @@
       "dev": true
     },
     "onetime": {
-      "version": "1.1.0",
+      "version": "2.0.1",
       "dev": true
     },
     "optionator": {
@@ -1911,7 +1943,7 @@
       "dev": true
     },
     "pluralize": {
-      "version": "1.2.1",
+      "version": "4.0.0",
       "dev": true
     },
     "postcss": {
@@ -1969,7 +2001,7 @@
       "dev": true
     },
     "progress": {
-      "version": "1.1.8",
+      "version": "2.0.0",
       "dev": true
     },
     "promise": {
@@ -2037,14 +2069,6 @@
           "dev": true
         }
       }
-    },
-    "readline2": {
-      "version": "1.0.1",
-      "dev": true
-    },
-    "rechoir": {
-      "version": "0.6.2",
-      "dev": true
     },
     "redent": {
       "version": "1.0.0",
@@ -2135,7 +2159,7 @@
       "dev": true
     },
     "restore-cursor": {
-      "version": "1.0.1",
+      "version": "2.0.0",
       "dev": true
     },
     "rimraf": {
@@ -2144,10 +2168,6 @@
     },
     "rollup": {
       "version": "0.43.0",
-      "dev": true
-    },
-    "rollup-plugin-alias": {
-      "version": "1.3.1",
       "dev": true
     },
     "rollup-plugin-babel": {
@@ -2179,11 +2199,15 @@
       }
     },
     "run-async": {
-      "version": "0.1.0",
+      "version": "2.3.0",
       "dev": true
     },
     "rx-lite": {
-      "version": "3.1.2",
+      "version": "4.0.8",
+      "dev": true
+    },
+    "rx-lite-aggregates": {
+      "version": "4.0.8",
       "dev": true
     },
     "safe-buffer": {
@@ -2224,10 +2248,6 @@
     },
     "setimmediate": {
       "version": "1.0.5",
-      "dev": true
-    },
-    "shelljs": {
-      "version": "0.7.8",
       "dev": true
     },
     "signal-exit": {
@@ -2307,7 +2327,7 @@
       "dev": true
     },
     "strip-bom": {
-      "version": "3.0.0",
+      "version": "2.0.0",
       "dev": true
     },
     "strip-indent": {
@@ -2327,9 +2347,13 @@
       "dev": true
     },
     "stylelint": {
-      "version": "7.11.1",
+      "version": "7.12.0",
       "dev": true,
       "dependencies": {
+        "ansi-regex": {
+          "version": "3.0.0",
+          "dev": true
+        },
         "get-stdin": {
           "version": "5.0.1",
           "dev": true
@@ -2343,11 +2367,11 @@
           "dev": true
         },
         "string-width": {
-          "version": "2.0.0",
+          "version": "2.1.0",
           "dev": true
         },
-        "table": {
-          "version": "4.0.1",
+        "strip-ansi": {
+          "version": "4.0.0",
           "dev": true
         }
       }
@@ -2373,15 +2397,23 @@
       "dev": true
     },
     "table": {
-      "version": "3.8.3",
+      "version": "4.0.1",
       "dev": true,
       "dependencies": {
+        "ansi-regex": {
+          "version": "3.0.0",
+          "dev": true
+        },
         "is-fullwidth-code-point": {
           "version": "2.0.0",
           "dev": true
         },
         "string-width": {
-          "version": "2.0.0",
+          "version": "2.1.0",
+          "dev": true
+        },
+        "strip-ansi": {
+          "version": "4.0.0",
           "dev": true
         }
       }
@@ -2411,6 +2443,10 @@
           "dev": true
         }
       }
+    },
+    "tmp": {
+      "version": "0.0.31",
+      "dev": true
     },
     "to-fast-properties": {
       "version": "1.0.3",
@@ -2455,10 +2491,6 @@
     },
     "uniq": {
       "version": "1.0.1",
-      "dev": true
-    },
-    "user-home": {
-      "version": "2.0.0",
       "dev": true
     },
     "util-deprecate": {
