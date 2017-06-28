@@ -16,13 +16,13 @@
   version "0.6.27"
   resolved "https://registry.yarnpkg.com/@types/jss/-/jss-0.6.27.tgz#d88f317de844f880758f54d8ef41013f32ddd03e"
 
-"@types/lodash@^4.14.66":
-  version "4.14.66"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.66.tgz#3dbb83477becf130611f8fac82a8fdb199805981"
+"@types/lodash@^4.14.67":
+  version "4.14.67"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.67.tgz#4714714434da110306b9862fbd36b30b55eb850a"
 
-"@types/react@^15.0.29":
-  version "15.0.32"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.32.tgz#a1d5291cc930a578435d9f17db77414ad4ce0f8c"
+"@types/react@^15.0.33":
+  version "15.0.33"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.33.tgz#442b025b3ee7d65f25c5cf495b7bd773855c079b"
 
 "@types/rollup@^0.41.0":
   version "0.41.1"

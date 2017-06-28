@@ -6,7 +6,7 @@
   "module": "lib/index.esm.js",
   "scripts": {
     "build": "node-sass sass/index.scss lib/index.css && rollup -c rollup.config.js",
-    "build-example": "rollup -c rollup.config.js -o example/imports/rsg-components.js && node-sass sass/index.scss example/client/main.css",
+    "build-example": "rollup -c rollup.config.js -o example/imports/rsg-components.js",
     "lint": "stylelint \"sass/**/*.scss\" --fix && flow check && eslint .",
     "prepublish": "node-sass sass/index.scss lib/index.css && rollup -c rollup.config.js"
   },
@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@types/jss": "^0.6.27",
-    "@types/lodash": "^4.14.66",
-    "@types/react": "^15.0.29",
+    "@types/lodash": "^4.14.67",
+    "@types/react": "^15.0.33",
     "@types/rollup": "^0.41.0",
     "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "^6.22.0",

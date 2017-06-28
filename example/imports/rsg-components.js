@@ -1626,18 +1626,16 @@ exports['default'] = function () {
 };
 });
 
-var index$3 = createCommonjsModule(function (module, exports) {
-"use strict";
+var _typeof$1 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+var isBrowser = (typeof window === "undefined" ? "undefined" : _typeof$1(window)) === "object" && (typeof document === "undefined" ? "undefined" : _typeof$1(document)) === 'object' && document.nodeType === 9;
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var isBrowser = exports.isBrowser = (typeof window === "undefined" ? "undefined" : _typeof(window)) === "object" && (typeof document === "undefined" ? "undefined" : _typeof(document)) === 'object' && document.nodeType === 9;
 
-exports.default = isBrowser;
+
+var module$1 = Object.freeze({
+	isBrowser: isBrowser,
+	default: isBrowser
 });
 
 var DomRenderer_1 = createCommonjsModule(function (module, exports) {
@@ -2047,6 +2045,8 @@ var VirtualRenderer = function () {
 exports['default'] = VirtualRenderer;
 });
 
+var _isInBrowser = ( module$1 && isBrowser ) || module$1;
+
 var findRenderer_1 = createCommonjsModule(function (module, exports) {
 'use strict';
 
@@ -2057,7 +2057,7 @@ exports['default'] = findRenderer;
 
 
 
-var _isInBrowser2 = _interopRequireDefault(index$3);
+var _isInBrowser2 = _interopRequireDefault(_isInBrowser);
 
 
 
@@ -2365,7 +2365,7 @@ exports['default'] = create();
 
 var index_1 = index$1.create;
 
-var index$6 = createCommonjsModule(function (module, exports) {
+var index$4 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2448,7 +2448,7 @@ function jssExtend() {
 }
 });
 
-var index$8 = createCommonjsModule(function (module, exports) {
+var index$6 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2563,7 +2563,7 @@ function jssNested() {
 }
 });
 
-var index$10 = createCommonjsModule(function (module, exports) {
+var index$8 = createCommonjsModule(function (module, exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2743,7 +2743,7 @@ exports['default'] = {
 };
 });
 
-var index$12 = createCommonjsModule(function (module, exports) {
+var index$10 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -2858,7 +2858,7 @@ Object.defineProperty(exports, "__esModule", {
 
 
 
-var _isInBrowser2 = _interopRequireDefault(index$3);
+var _isInBrowser2 = _interopRequireDefault(_isInBrowser);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -2935,7 +2935,7 @@ exports['default'] = supportedProperty;
 
 
 
-var _isInBrowser2 = _interopRequireDefault(index$3);
+var _isInBrowser2 = _interopRequireDefault(_isInBrowser);
 
 
 
@@ -3010,7 +3010,7 @@ exports['default'] = supportedValue;
 
 
 
-var _isInBrowser2 = _interopRequireDefault(index$3);
+var _isInBrowser2 = _interopRequireDefault(_isInBrowser);
 
 
 
@@ -3077,7 +3077,7 @@ function supportedValue(property, value) {
 }
 });
 
-var index$16 = createCommonjsModule(function (module, exports) {
+var index$14 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3116,7 +3116,7 @@ exports.supportedProperty = _supportedProperty2['default'];
 exports.supportedValue = _supportedValue2['default'];
 });
 
-var index$14 = createCommonjsModule(function (module, exports) {
+var index$12 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3126,7 +3126,7 @@ exports['default'] = jssVendorPrefixer;
 
 
 
-var vendor = _interopRequireWildcard(index$16);
+var vendor = _interopRequireWildcard(index$14);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
@@ -3174,7 +3174,7 @@ function jssVendorPrefixer() {
 }
 });
 
-var index$18 = createCommonjsModule(function (module, exports) {
+var index$16 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3204,7 +3204,7 @@ function jssPropsSort() {
 }
 });
 
-var index$20 = createCommonjsModule(function (module, exports) {
+var index$18 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3460,7 +3460,7 @@ var customPropObj = exports.customPropObj = {
 };
 });
 
-var index$22 = createCommonjsModule(function (module, exports) {
+var index$20 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3641,7 +3641,7 @@ function jssExpand() {
 }
 });
 
-var index$24 = createCommonjsModule(function (module, exports) {
+var index$22 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3835,7 +3835,7 @@ function jssGlobal() {
 }
 });
 
-var index$5 = createCommonjsModule(function (module, exports) {
+var index$3 = createCommonjsModule(function (module, exports) {
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -3844,39 +3844,39 @@ Object.defineProperty(exports, "__esModule", {
 
 
 
-var _jssExtend2 = _interopRequireDefault(index$6);
+var _jssExtend2 = _interopRequireDefault(index$4);
 
 
 
-var _jssNested2 = _interopRequireDefault(index$8);
+var _jssNested2 = _interopRequireDefault(index$6);
 
 
 
-var _jssCamelCase2 = _interopRequireDefault(index$10);
+var _jssCamelCase2 = _interopRequireDefault(index$8);
 
 
 
-var _jssDefaultUnit2 = _interopRequireDefault(index$12);
+var _jssDefaultUnit2 = _interopRequireDefault(index$10);
 
 
 
-var _jssVendorPrefixer2 = _interopRequireDefault(index$14);
+var _jssVendorPrefixer2 = _interopRequireDefault(index$12);
 
 
 
-var _jssPropsSort2 = _interopRequireDefault(index$18);
+var _jssPropsSort2 = _interopRequireDefault(index$16);
 
 
 
-var _jssCompose2 = _interopRequireDefault(index$20);
+var _jssCompose2 = _interopRequireDefault(index$18);
 
 
 
-var _jssExpand2 = _interopRequireDefault(index$22);
+var _jssExpand2 = _interopRequireDefault(index$20);
 
 
 
-var _jssGlobal2 = _interopRequireDefault(index$24);
+var _jssGlobal2 = _interopRequireDefault(index$22);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3888,7 +3888,7 @@ exports.default = function () {
 };
 });
 
-var preset = unwrapExports(index$5);
+var preset = unwrapExports(index$3);
 
 var _aphrodite=aphrodite(index_1(preset())); var StyleSheet$1=_aphrodite.StyleSheet; var css$1=_aphrodite.css;function RSGCheckbox(b){var c=b.large?" switch":" switch switch-lg",d=StyleSheet$1.create({mainSpan:{position:"relative",display:"inline-block",width:b.large?"50px":"40px",height:b.large?"25px":"20px",backgroundColor:"#fff",border:"1px solid #ddd",borderRadius:"100px",transition:"all 0.5s",boxShadow:"1px 2px 3px rgba(0, 0, 0, 0.1) inset",verticalAlign:"middle",cursor:"pointer","&:after":{content:"",position:"absolute",backgroundColor:"#fff",top:0,left:0,height:b.large?"23px":"18px",width:b.large?"23px":"18px",border:"1px solid #ddd",borderRadius:"400px",boxShadow:"1px 1px 3px rgba(0, 0, 0, 0.1)","-webkit-transition":"all 0.2s",transition:"all 0.2s"}},mainLabel:{cursor:"pointer",composes:"switch"},mainInput:{cursor:"pointer",opacity:0,position:"absolute",zIndex:-1,"&:checked + $mainSpan":{backgroundColor:"#5d9cec",borderColor:"#5d9cec",transition:"all 0.5s"},"&:checked + $mainSpan:after":{left:"50%",transition:"all 0.2s"}}}),e=omit(this.props,["className","onChange"]);return React.createElement("label",_extends({className:css$1(d.mainLabel)+c,htmlFor:"checkbox",style:b.style},e),React.createElement("input",_extends({type:"checkbox",onChange:b.onChange,checked:b.checked,key:1,className:css$1(d.mainInput)},omit(this.props,["type","onChange"]))),React.createElement("span",{className:css$1(d.mainSpan),key:2}))}RSGCheckbox.defaultProps={large:!1};
 
