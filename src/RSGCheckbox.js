@@ -2,7 +2,7 @@
 // Imports here.
 import React from "react";
 import { omit } from "lodash";
-import protoCSS from "./protoCSS";
+import compiledCSS from "../lib/index.css";
 
 // Insert types for our components props here.
 type Props = {
@@ -14,12 +14,13 @@ type Props = {
 
 // Our beautiful component.
 export default function RSGCheckbox(props: Props): React.createElement {
-  const classy = props.large ? " switch" : " switch switch-lg";
+  const classy = props.large ? "switch" : "switch switch-lg";
 
   const a = omit(this.props, ["className", "onChange"]);
 
   return (
-    <protoCSS>
+    <div>
+      <style>{compiledCSS}</style>
       <label className={classy} htmlFor="checkbox" style={props.style} {...a}>
         <input
           type="checkbox"
@@ -30,7 +31,7 @@ export default function RSGCheckbox(props: Props): React.createElement {
         />
         <span key={2} />
       </label>
-    </protoCSS>
+    </div>
   );
 }
 
