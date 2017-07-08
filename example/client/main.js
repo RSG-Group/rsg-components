@@ -55,6 +55,7 @@ class App extends Component {
     };
   }
 
+  /* eslint-disable max-len */
   render() {
     const string = `Username in state: ${this.state.username} /
      Password in state: ${this.state.password} /
@@ -80,6 +81,7 @@ class App extends Component {
     );
   }
 }
+/* eslint-enable */
 
 const AppContainer = createContainer(() => ({
   db: Database.find(),

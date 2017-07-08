@@ -18,12 +18,9 @@
   "author": "RSG",
   "dependencies": {
     "aphrodite-jss": "^1.1.1",
-    "jss": "^8.0.0",
-    "jss-preset-default": "^3.0.0",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "@types/jss": "^0.6.27",
     "@types/lodash": "^4.14.67",
     "@types/react": "^15.0.33",
     "@types/rollup": "^0.41.0",
@@ -34,12 +31,12 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.1.0",
-    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-airbnb": "^15.0.2",
     "eslint-plugin-flowtype": "^2.34.0",
     "eslint-plugin-import": "^2.3.0",
-    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "flow-bin": "^0.48.0",
+    "flow-bin": "^0.49.1",
     "node-sass": "^4.5.3",
     "react": "^15.6.1",
     "rollup": "^0.43.0",
@@ -54,5 +51,9 @@
   },
   "stylelint": {
     "extends": "stylelint-config-standard"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
