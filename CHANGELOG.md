@@ -45,8 +45,8 @@ Update to ``` RSGProgressBar ```
 2.0.12  
 Minor update to README.md and `images`
 
-2.0.13
-A new component, ``` RSGCheckbox ```, has been introduced.
-![Checkbox image](https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Checkboxes.png)
-You can theoretically use this without the ```rsg-components``` library. [Example here.](http://codepen.io/radicho/pen/jBJjPb)
+2.0.13  
+A new component, ``` RSGCheckbox ```, has been introduced.  
+![Checkbox image](https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Checkboxes.png)  
+You can theoretically use this without the ```rsg-components``` library. [Example here.](http://codepen.io/radicho/pen/jBJjPb)  
 More info: https://medium.com/@radicho/customized-checkboxes-9190f969b681
