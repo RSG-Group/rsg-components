@@ -1,4 +1,4 @@
-/*  Checkbox CSS code.  */
+// RSGCheckbox CSS code.
 .switch input:checked + span {
   background-color: #5d9cec;
   border-color: #5d9cec;
@@ -56,32 +56,4 @@
 .switch .switch-lg span::after {
   height: 23px;
   width: 23px;
-}
-
-/* ProgressBar CSS code. */
-.RSGProgressBar {
-  background: rgb(210, 215, 215);
-  box-shadow: inset 0 1.5px 3px rgb(150, 150, 150);
-  -webkit-box-shadow: inset 0 1.5px 3px rgb(150, 150, 150);
-  border-radius: 3px;
-  height: 20px;
-}
-
-@keyframes animatedBackground {
-  from { background-position: 0 0; }
-  to { background-position: 100% 0; }
-}
-
-.PP {
-  background-image: url(https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Progress.png);
-  background-position: 0 0;
-  background-repeat: repeat-x;
-  animation: animatedBackground 75s linear infinite;
-  transition: width 1s;
-  width: 1%;
-  height: 20px;
-  border-radius: 5px;
-  text-align: center;
-  vertical-align: middle;
-  color: white;
 }
