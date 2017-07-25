@@ -1,11 +1,14 @@
 {
-  "presets": [["env", {
+  "presets": ["react", ["env", {
     "targets": {
       "browsers": [
         "Firefox > 31",
         "Chrome > 37"
       ]
-    }
-  }], "react"],
-  "plugins": ["babel-plugin-transform-react-remove-prop-types"]
+    },
+    "modules": false
+  }], "stage-0"],
+  "plugins": ["external-helpers", ["inline-import", {
+    "extensions": [".css"]
+  }]]
 }

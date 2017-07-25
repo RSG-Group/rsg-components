@@ -1,5 +1,5 @@
-.RSGProgressBar {
-  background: rgb(210, 215, 215);
+.RSGProgressBar_animated {
+  background: rgb(210, 220, 220);
   box-shadow: inset 0 1.5px 3px rgb(150, 150, 150);
   -webkit-box-shadow: inset 0 1.5px 3px rgb(150, 150, 150);
   border-radius: 3px;
@@ -11,17 +11,15 @@
   to { background-position: 100% 0; }
 }
 
-.PP {
+.PP_animated {
   background-image: url(https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Progress.png);
-  background-position: 0px 0px;
+  background-position: 0 0;
   background-repeat: repeat-x;
-
   animation: animatedBackground 75s linear infinite;
+  overflow: hidden;
   transition: width 1s;
-  width: 1%;
   height: 20px;
   border-radius: 5px;
   text-align: center;
-  vertical-text-align: center;
   color: white;
 }

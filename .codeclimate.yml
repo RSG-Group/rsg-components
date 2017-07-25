@@ -1,0 +1,35 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+  eslint:
+    enabled: true
+    channel: "eslint-4"
+  fixme:
+    enabled: true
+    strings:
+    - TODO
+    - FIXME
+    - HACK
+    - BUG
+    - flow-disable-next-line
+    - eslint-disable-line
+    - eslint-disable-next-line
+  markdownlint:
+    enabled: true
+    checks:
+      MD013:
+        enabled: false
+  stylelint:
+    enabled: true
+
+ratings:
+  paths:
+  - "**.js"
+  - "**.md"
+  - "**.css"
+  - "**.less"
+  - "**.scss"
+  - "**.sss"

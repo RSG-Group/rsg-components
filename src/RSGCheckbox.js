@@ -1,33 +1,38 @@
+// @flow
+// Imports here.
 import React from "react";
 import { omit } from "lodash";
-import PropTypes from "prop-types";
+import compiledCSS from "../lib/index.css";
 
-export default function RSGCheckbox(props) {
-  let classes = "switch";
-  if (props.RSGType && props.RSGType === "lg") {
-    classes += " switch-lg";
-  }
+// Insert types for our components props here.
+type Props = {
+  style: Object,
+  onChange: Function,
+  checked: boolean,
+  large?: boolean,
+};
 
-  const input = <input type="checkbox" key={1} {...omit(props, ["type"])} />;
+// Our beautiful component.
+export default function RSGCheckbox(props: Props): React.createElement {
+  const classy = props.large ? "switch" : "switch switch-lg";
 
-  const span = <span key={2} />;
-  const style = props.style;
+  const a = omit(this.props, ["className", "onChange"]);
 
   return (
-    <label htmlFor="checkbox" className={classes} style={style} {...omit(props, ["className"])}>
-      {input}
-      {span}
-    </label>
+    <div>
+      <style>{compiledCSS}</style>
+      <label className={classy} htmlFor="checkbox" style={props.style} {...a}>
+        <input
+          type="checkbox"
+          onChange={props.onChange}
+          checked={props.checked}
+          key={1}
+          {...omit(this.props, ["type", "onChange"])}
+        />
+        <span key={2} />
+      </label>
+    </div>
   );
 }
 
-
-RSGCheckbox.propTypes = {
-  RSGType: PropTypes.string,
-  style: PropTypes.shape({}),
-};
-
-RSGCheckbox.defaultProps = {
-  RSGType: undefined,
-  style: undefined,
-};
+RSGCheckbox.defaultProps = { large: false };

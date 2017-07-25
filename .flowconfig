@@ -1,0 +1,21 @@
+[ignore]
+# Following packages to be ignored due to type errors.
+.*/node_modules/eslint-plugin-jsx-a11y/.*
+.*/node_modules/stylelint/lib/.*
+
+# Minor ignores.
+
+.*/node_modules/babel-plugin-transform-react-remove-prop-types/src/index.js.*
+
+# Ignore the example.
+.*/example/.*
+.*/.meteor/.*
+
+[include]
+
+[libs]
+node_modules/jss/flow-typed
+[options]
+emoji=true
+suppress_comment= \\(.\\|\n\\)*\\(flow-disable-next-line\\|\\$FlowFixMe\\)
+unsafe.enable_getters_and_setters=true

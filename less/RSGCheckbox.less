@@ -1,12 +1,15 @@
-.switch input:checked+span {
+// RSGCheckbox CSS code.
+.switch input:checked + span {
   background-color: #5d9cec;
   border-color: #5d9cec;
-  transition: all .5s;
+  transition: all 0.5s;
 }
-.switch.switch-lg span {
+
+.switch .switch-lg span {
   width: 50px;
   height: 25px;
 }
+
 .switch span {
   position: relative;
   display: inline-block;
@@ -15,14 +18,16 @@
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 100px;
-  transition: all .5s;
-  box-shadow: 1px 2px 3px rgba(0,0,0,.1) inset;
+  transition: all 0.5s;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1) inset;
   vertical-align: middle;
 }
+
 .switch * {
   cursor: pointer;
 }
-.switch span:after {
+
+.switch span::after {
   content: "";
   position: absolute;
   background-color: #fff;
@@ -32,19 +37,23 @@
   width: 18px;
   border: 1px solid #ddd;
   border-radius: 400px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,.1);
-  -webkit-transition: all .2s;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
+
 .switch input {
   opacity: 0;
   position: absolute;
   z-index: -1;
 }
-.switch input:checked+span:after {
+
+.switch input:checked + span::after {
   left: 50%;
-  transition: all .2s;
+  transition: all 0.2s;
 }
-.switch.switch-lg span:after {
+
+.switch .switch-lg span::after {
   height: 23px;
   width: 23px;
 }

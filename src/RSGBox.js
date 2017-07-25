@@ -1,40 +1,53 @@
+// @flow
+// Imports come here.
 import React from "react";
 import { omit } from "lodash";
-import PropTypes from "prop-types";
+import { StyleSheet, css } from "aphrodite-jss";
 
-export default function RSGBox(props) {
-  let RSGStyle = {};
+// Define the types of our props.
+type Props = {
+  color?: string,
+  width?: string,
+  children: Array<React.createElement>,
+  style?: {},
+  opacity?: string,
+  height: string,
+};
 
-  RSGStyle.height = "20px";
-  RSGStyle.background = "rgb(230, 230, 230)";
-  RSGStyle.fontFamily = "Verdana, Geneva, sans-serif";
-  RSGStyle.color = props.color;
-  RSGStyle.width = props.width;
-  RSGStyle.opacity = props.opacity;
+// Our little component.
+export default function RSGBox(props: Props): React.createElement {
+  // Create our styles.
+  const styles: Object = StyleSheet.create({
+    mainDiv: {
+      height: props.height ? props.width : undefined,
+      color: props.color,
+      width: props.width ? props.width : undefined,
+      opacity: props.opacity,
+      background: "rgb(230, 230, 230)",
+      fontFamily: "Verdana, Geneva, sans-serif",
+      ...props.style,
+    },
+    mainSpan: {
+      marginLeft: "15px",
+      fontSize: "13.5px",
+      verticalAlign: "middle",
+    },
+  });
 
-  RSGStyle = Object.assign(RSGStyle, props.style);
 
   return (
-    <div style={RSGStyle} {...omit(props, ["style"])}>
-      <span style={{ marginLeft: "15px", fontSize: "13.5px", verticalAlign: "middle" }}>
-        ...props.children
+    <div className={css(styles.mainDiv)} {...omit(props, ["style"])}>
+      <span className={css(styles.mainSpan)}>
+        {props.children}
       </span>
     </div>
   );
 }
 
-
-RSGBox.propTypes = {
-  color: PropTypes.string,
-  width: PropTypes.string,
-  // eslint-disable-next-line react/no-unused-prop-types
-  children: PropTypes.arrayOf(PropTypes.element).isRequired,
-  style: PropTypes.shape({}).isRequired,
-  opacity: PropTypes.string,
-};
-
+// The default props.
 RSGBox.defaultProps = {
   color: "rgb(10, 10, 10)",
   width: "95%",
   opacity: "1",
+  style: {},
 };

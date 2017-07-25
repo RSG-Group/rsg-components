@@ -3,19 +3,14 @@ module.exports = {
     "es6": true,
     "browser": true
   },
-  "extends": "eslint-config-airbnb",
+  "extends": ["plugin:flowtype/recommended", "eslint-config-airbnb"],
   "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true
-    },
     "sourceType": "module"
   },
   "plugins": [
     "react",
-    "jsx-a11y",
-    "import"
+    "flowtype"
   ],
   "rules": {
     "indent": [

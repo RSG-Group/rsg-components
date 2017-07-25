@@ -1,2 +1,0 @@
-For the best way of use you must combine the different RSGComponents like this:
-RSGButton + RSGLabel + RSGFormBasic + RSGBox 
