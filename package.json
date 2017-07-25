@@ -1,7 +1,7 @@
 {
   "name": "rsg-components",
-  "version": "3.0.0-alpha.1",
-  "description": "Some React.js components with beautiful styles and modified props",
+  "version": "3.0.0-alpha.2",
+  "description": "Some React components with beautiful styles.",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "scripts": {
