@@ -41,7 +41,7 @@ git clone https://github.com/RSG-Group/rsg-components
 - IE < 11 unsupported.
 - Versions of Safari newer than 2014-15 supported.
 - Microsoft Edge supported.
-- Opera versions which use Blink are supported.
+- Supports Opera versions which use Blink.
 
 ## Example
 
@@ -52,8 +52,6 @@ import { RSGCheckbox } from "rsg-components";
 
 render(<RSGCheckbox props>children</RSGCheckbox>, document.getElementById("app"));
 ```
-
-### If using RSGProgressBar, include `node_modules/rsg-components/lib/index.css` in your HTML. If RSGCheckbox does not work, then use this CSS file for that component as well
 
 View all components, props and styles on the GitHub wiki page: [https://github.com/RSG-Group/rsg-components/wiki/](https://github.com/RSG-Group/rsg-components/wiki/)
 

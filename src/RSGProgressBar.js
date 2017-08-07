@@ -17,7 +17,7 @@ type Props = {
 
 // A function to define the error thrown on invalid props.
 function ReactInvalidPropException(info: {
-  prop: string,
+  prop: string | Array<string>,
   type: string,
   expectedValue?: string,
   actualValue?: string,
@@ -27,11 +27,13 @@ function ReactInvalidPropException(info: {
   // Extract values from info to make code line length smaller.
   const { type, prop, expectedValue, actualValue } = info;
   // If..
-  if (type === "invalid-type" && expectedValue !== undefined && actualValue !== undefined) {
+  if (type === "invalid-type" && expectedValue !== undefined && actualValue !== undefined && typeof prop === "string") {
     this.message = `RSGProgressBar has incorrectly recieved a ${actualValue} for the prop "${prop}" when it expected a ${expectedValue}.`;
   // Else..
-  } else if (info.type === "unassigned-prop") {
+  } else if (info.type === "unassigned-prop" && typeof prop === "string") {
     this.message = `RSGProgressBar has not recieved the required prop "${prop}". Click "OK" to rectify.`;
+  } else if (info.type === "dual-props") {
+    this.message = `RSGProgressBar has recieved 2 incompatible props, ${prop[0]} and ${prop[1]}. Please resolve the issue.`;
   }
 }
 
@@ -64,9 +66,12 @@ export default function RSGProgressBar(props: Props) {
     CSSProp = "_animated";
   }
 
-  // What? Replace with check for props.children and props.text should not co-exist.
-  if (props.children && typeof props.children !== "string") {
-    console.error("Please set only text for children");
+  // props.children and props.text should not co-exist.
+  if (props.children && props.text) {
+    throw new ReactInvalidPropException({
+      props: ["props.children", "props.text"],
+      type: "dual-props",
+    });
   }
 
   // Content to be included on the progress bar.
