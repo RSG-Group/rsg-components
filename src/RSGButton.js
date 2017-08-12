@@ -11,6 +11,7 @@ type Props = {
   fontSize?: string,
   fontStyle?: string,
   opacity?: string,
+  activeStyles?: string,
   style?: Object,
   children: Array<React.createElement>,
   sizes: string, // If you face a bug saying sizes is compulsory with flow, pass anything as sizes.
@@ -34,9 +35,49 @@ export default function RSGButton(props: Props): React.createElement {
   let padding = "5px 4px";
   if (sizeId !== "default") padding = sizes[sizeId]().padding;
 
+  const activeStylesList: Object = {
+    'popUps': {
+      '&:hover': {
+        boxShadow: '2px 2px 2px #888888',
+      },
+      '&:active': {
+        position: 'relative',
+        top: '1px',
+        left: '1px',
+        boxShadow: 'none',
+      },
+    },
+    'clickAnimation': {
+      transition: 'all .15s ease-out',
+      '&:hover': {
+        '-moz-filter': 'brightness(117%)',
+        '-webkit-filter': 'brightness(117%)',
+        '-o-filter': 'brightness(117%)',
+        '-ms-filter': 'brightness(117%)',
+        filter: 'brightness(117%)',
+      },
+      '&:active': {
+        borderRadius: '50%',
+        background: 'rgba(255, 255, 255, 0.35)',
+      },
+    },
+  }
+
+  let activeStylesContent: Object = props.activeStyles && activeStylesList[props.activeStyles];
+  let divStyles: Object = props.activeStyles === "clickAnimation" ? {
+    '&:active': {
+      background: props.background,
+      '-moz-filter': 'brightness(132.5%)',
+        '-webkit-filter': 'brightness(132.5%)',
+        '-o-filter': 'brightness(132.5%)',
+        '-ms-filter': 'brightness(132.5%)',
+        filter: 'brightness(132.5%)',
+    },
+  } : {};
+
   const styles: Object = StyleSheet.create({
     mainButton: {
-      border: "1px solid rgb(30, 100, 160)",
+      border: props.border,
       borderRadius: "3px",
       background: props.background,
       color: props.color,
@@ -45,25 +86,36 @@ export default function RSGButton(props: Props): React.createElement {
       ...props.style,
       fontSize: props.fontSize ? props.fontSize : sizes[sizeId]().fontSize,
       fontStyle: props.fontStyle,
+      ...activeStylesContent,
+      cursor: props.cursor,
     },
+    div: {
+      transition: 'all .2s ease-out',
+      display: 'inline-block',
+      ...divStyles
+    }
   });
 
-  const exclude = ["style", "background", "color", "fontSize", "fontStyle", "opacity", "sizes"];
+  const exclude = ["style", "background", "color", "fontSize", "fontStyle", "opacity", "sizes", "activeStyles", "cursor"];
 
   return (
-    <button className={css(styles.mainButton)} {...omit(props, exclude)} >
-      {props.children}
-    </button>
+    <div className={css(styles.div)}>
+      <button className={css(styles.mainButton)} {...omit(props, exclude)} >
+          {props.children}
+      </button>
+    </div>
   );
 }
 
 // and sir default props.
 RSGButton.defaultProps = {
   background: "rgb(50, 120, 180)",
-  color: "rgb(220, 220, 220)",
+  color: "white",
   opacity: "1",
   style: {},
   fontSize: undefined,
   fontStyle: undefined,
   sizes: "default",
+  cursor: "default",
+  border: "1px solid rgb(30, 100, 160)",
 };
