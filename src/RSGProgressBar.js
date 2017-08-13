@@ -69,7 +69,7 @@ export default function RSGProgressBar(props: Props) {
   // props.children and props.text should not co-exist.
   if (props.children && props.text) {
     throw new ReactInvalidPropException({
-      props: ["props.children", "props.text"],
+      prop: ["props.children", "props.text"],
       type: "dual-props",
     });
   }
