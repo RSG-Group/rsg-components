@@ -6,7 +6,7 @@ import { StyleSheet, css } from 'aphrodite-jss'
 
 // Define the props and types our app needs.
 type Props = {
-  animationType?: string | boolean,
+  animationType?: string | false,
   background?: string,
   color?: string,
   fontSize?: string,
@@ -75,9 +75,9 @@ export default function RSGButton (props: Props): React.createElement {
     }
   } : {}
 
-  const styles: Object = StyleSheet.create(() => {
+  const styles: Object = StyleSheet.create((() => {
     let extraAnimationStyling = {}
-    if (typeof props.animationType === 'string') {
+    if (props.animationType) {
       extraAnimationStyling = animationStyling[props.animationType]
     }
     return {
@@ -100,9 +100,9 @@ export default function RSGButton (props: Props): React.createElement {
         ...divStyles
       }
     }
-  })
+  })())
 
-  const exclude = ['style', 'background', 'color', 'fontSize', 'fontStyle', 'opacity', 'sizes', 'activeStyles', 'cursor']
+  const exclude = ['style', 'background', 'color', 'fontSize', 'fontStyle', 'opacity', 'sizes', 'animationType', 'cursor', 'border']
 
   return (
     <div className={css(styles.div)}>
