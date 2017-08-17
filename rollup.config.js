@@ -11,7 +11,7 @@ const config = {
     include: 'node_modules/**'
   }), babel({
     plugins: ['external-helpers'],
-    presets: ['babili'],
+    presets: ['minify'],
     exclude: 'node_modules/**'
   })],
   external: ['lodash', 'react', 'aphrodite-jss', 'aphrodite'],
