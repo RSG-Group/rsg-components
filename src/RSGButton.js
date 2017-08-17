@@ -65,15 +65,15 @@ export default function RSGButton (props: Props): React.createElement {
     }
   }
 
-  let activeStylesContent: Object = props.activeStyles && activeStylesList[props.activeStyles]
+  let activeStylesContent: any = props.activeStyles && activeStylesList[props.activeStyles]
   let divStyles: Object = props.activeStyles === 'clickAnimation' ? {
     '&:active': {
       background: props.background,
-      '-moz-filter': 'brightness(132.5%)',
-      '-webkit-filter': 'brightness(132.5%)',
-      '-o-filter': 'brightness(132.5%)',
-      '-ms-filter': 'brightness(132.5%)',
-      filter: 'brightness(132.5%)'
+      '-moz-filter': 'brightness(125%)',
+      '-webkit-filter': 'brightness(125%)',
+      '-o-filter': 'brightness(125%)',
+      '-ms-filter': 'brightness(125%)',
+      filter: 'brightness(125%)'
     }
   } : {}
 
