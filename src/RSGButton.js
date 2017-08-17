@@ -6,18 +6,17 @@ import { StyleSheet, css } from 'aphrodite-jss'
 
 // Define the props and types our app needs.
 type Props = {
+  animationType?: string | boolean,
   background?: string,
   color?: string,
   fontSize?: string,
   fontStyle?: string,
   opacity?: string,
-  activeStyles?: string,
   style?: Object,
   children: Array<React.createElement>,
   border?: string,
   cursor?: string,
-  sizes: string, // If you face a bug saying sizes is compulsory with flow, pass anything as sizes.
-  // This was done to avoid errors later in the component.
+  sizes?: string,
 };
 
 // Create stylesheet of sizes.
@@ -37,8 +36,8 @@ export default function RSGButton (props: Props): React.createElement {
   let padding = '5px 4px'
   if (sizeId !== 'default') padding = sizes[sizeId]().padding
 
-  const activeStylesList: Object = {
-    'popUps': {
+  const animationStyling = {
+    elevated: {
       '&:hover': {
         boxShadow: '2px 2px 2px #888888'
       },
@@ -49,7 +48,7 @@ export default function RSGButton (props: Props): React.createElement {
         boxShadow: 'none'
       }
     },
-    'clickAnimation': {
+    ripple: {
       transition: 'all .15s ease-out',
       '&:hover': {
         '-moz-filter': 'brightness(117%)',
@@ -65,8 +64,7 @@ export default function RSGButton (props: Props): React.createElement {
     }
   }
 
-  let activeStylesContent: any = props.activeStyles && activeStylesList[props.activeStyles]
-  let divStyles: Object = props.activeStyles === 'clickAnimation' ? {
+  let divStyles: Object = props.animationType === 'ripple' ? {
     '&:active': {
       background: props.background,
       '-moz-filter': 'brightness(125%)',
@@ -77,24 +75,30 @@ export default function RSGButton (props: Props): React.createElement {
     }
   } : {}
 
-  const styles: Object = StyleSheet.create({
-    mainButton: {
-      border: props.border,
-      borderRadius: '3px',
-      background: props.background,
-      color: props.color,
-      opacity: props.opacity,
-      padding,
-      ...props.style,
-      fontSize: props.fontSize ? props.fontSize : sizes[sizeId]().fontSize,
-      fontStyle: props.fontStyle,
-      ...activeStylesContent,
-      cursor: props.cursor
-    },
-    div: {
-      transition: 'all .2s ease-out',
-      display: 'inline-block',
-      ...divStyles
+  const styles: Object = StyleSheet.create(() => {
+    let extraAnimationStyling = {}
+    if (typeof props.animationType === 'string') {
+      extraAnimationStyling = animationStyling[props.animationType]
+    }
+    return {
+      mainButton: {
+        border: props.border,
+        borderRadius: '3px',
+        background: props.background,
+        color: props.color,
+        opacity: props.opacity,
+        padding,
+        ...props.style,
+        fontSize: props.fontSize ? props.fontSize : sizes[sizeId]().fontSize,
+        fontStyle: props.fontStyle,
+        ...extraAnimationStyling,
+        cursor: props.cursor
+      },
+      div: {
+        transition: 'all .2s ease-out',
+        display: 'inline-block',
+        ...divStyles
+      }
     }
   })
 
@@ -119,5 +123,6 @@ RSGButton.defaultProps = {
   fontStyle: undefined,
   sizes: 'default',
   cursor: 'default',
-  border: '1px solid rgb(30, 100, 160)'
+  border: '1px solid rgb(30, 100, 160)',
+  animationType: false
 }

@@ -6,7 +6,7 @@ import { StyleSheet, css } from 'aphrodite-jss'
 type Props = {
   children: Array<React.createElement>,
   opacity?: string, // eslint-disable-line react/no-unused-prop-types
-  style: {},
+  style?: Object,
   color?: string, // eslint-disable-line react/no-unused-prop-types
   labelType?: string,
 };

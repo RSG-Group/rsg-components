@@ -19,7 +19,7 @@ export default function RSGBox (props: Props): React.createElement {
   // Create our styles.
   const styles: Object = StyleSheet.create({
     mainDiv: {
-      height: props.height ? props.width : undefined,
+      height: props.height ? props.height : undefined,
       color: props.color,
       width: props.width ? props.width : undefined,
       opacity: props.opacity,

@@ -99,5 +99,5 @@ export default function RSGProgressBar (props: Props) {
 RSGProgressBar.defaultProps = {
   anim: false,
   checkered: false,
-  text: ''
+  text: '' // eslint-disable-line react/default-props-match-prop-types
 }
