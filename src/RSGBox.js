@@ -36,7 +36,7 @@ export default function RSGBox (props: Props): React.createElement {
   })
 
   return (
-    <div className={css(styles.mainDiv)} {...omit(props, ['style'])}>
+    <div className={css(styles.mainDiv)} {...omit(props, ['style', 'background', 'color', 'opacity', 'width', 'height'])}>
       <span className={css(styles.mainSpan)}>
         {props.children}
       </span>
@@ -50,5 +50,5 @@ RSGBox.defaultProps = {
   opacity: '1',
   style: {},
   width: '95%',
-  background: 'rgb(230, 230, 230)',
+  background: 'rgb(230, 230, 230)'
 }

@@ -5,24 +5,21 @@ import { StyleSheet, css } from 'aphrodite-jss'
 
 type Props = {
   children: Array<React.createElement>,
-  opacity?: string, // eslint-disable-line react/no-unused-prop-types
+  opacity?: string,
   style?: Object,
-  color?: string, // eslint-disable-line react/no-unused-prop-types
+  color?: string,
   labelType?: string,
 };
 
 export default function RSGLabel (props: Props) {
   const labelTypes: Object = {
-    de: () => ('rgb(195, 195, 195)'),
-    success: () => ('rgb(85, 180, 90)'),
-    warn: () => ('rgb(255, 150, 25)'),
-    danger: () => ('rgb(220, 75, 75)'),
-    default: () => ('rgb(195, 195, 195)'),
-    lime: () => ('rgb(20, 255, 0)'),
-    aqua: () => ('rgb(0, 255, 255)')
+    success: 'rgb(85, 180, 90)',
+    warn: 'rgb(255, 150, 25)',
+    danger: 'rgb(220, 75, 75)',
+    default: 'rgb(195, 195, 195)',
+    lime: 'rgb(20, 255, 0)',
+    aqua: 'rgb(0, 255, 255)'
   }
-
-  let background = labelTypes[props.labelType]()
 
   const styles = StyleSheet.create({
     mainSpan: {
@@ -31,7 +28,7 @@ export default function RSGLabel (props: Props) {
       fontSize: '.975em',
       padding: '.175em .3em',
       borderRadius: '.235em',
-      background: background,
+      background: labelTypes[props.labelType],
       opacity: props.opacity,
       ...props.style
     }
@@ -45,7 +42,7 @@ export default function RSGLabel (props: Props) {
 }
 
 RSGLabel.defaultProps = {
-  labelType: 'de',
+  labelType: 'default',
   color: 'rgb(10, 10, 10)',
   style: {},
   opacity: '1'

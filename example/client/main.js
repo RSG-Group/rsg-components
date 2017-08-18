@@ -70,11 +70,11 @@ class App extends Component {
         />
         <RSGButton onClick={this.handleClick}>Submit</RSGButton>
         <br /><br />
-        <RSGBox height={50}>
+        <RSGBox height={45}>
           {string}
         </RSGBox>
         <br />
-        <RSGLabel labelType='s'>Database in sync with server.</RSGLabel>
+        <RSGLabel labelType='success'>Database in sync with server.</RSGLabel>
         <br /><br />
         <RSGCheckbox checked={this.state.checked} large onChange={() => this.setState({ checked: !this.state.checked })} />
       </div>
