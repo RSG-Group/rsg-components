@@ -11,13 +11,13 @@ See the License for the specific language governing permissions and
 limitations under the License. */
 
 // Let's import...
-import RSGBox from "./RSGBox";
-import RSGButton from "./RSGButton";
-import RSGLabel from "./RSGLabel";
-import RSGFormBasic from "./RSGFormBasic";
-import RSGTransition from "./RSGTransition";
-import RSGProgressBar from "./RSGProgressBar";
-import RSGCheckbox from "./RSGCheckbox";
+import RSGBox from './RSGBox'
+import RSGButton from './RSGButton'
+import RSGLabel from './RSGLabel'
+import RSGFormBasic from './RSGFormBasic'
+import RSGTransition from './RSGTransition'
+import RSGProgressBar from './RSGProgressBar'
+import RSGCheckbox from './RSGCheckbox'
 
 // Then export...
 export {
@@ -27,5 +27,5 @@ export {
   RSGFormBasic,
   RSGTransition,
   RSGProgressBar,
-  RSGCheckbox,
-};
+  RSGCheckbox
+}

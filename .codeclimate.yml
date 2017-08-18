@@ -17,6 +17,7 @@ engines:
     - flow-disable-next-line
     - eslint-disable-line
     - eslint-disable-next-line
+    - any
   markdownlint:
     enabled: true
     checks:
