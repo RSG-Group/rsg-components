@@ -55,6 +55,6 @@ render(<RSGCheckbox props>children</RSGCheckbox>, document.getElementById("app")
 
 View all components, props and styles on the GitHub wiki page: [https://github.com/RSG-Group/rsg-components/wiki/](https://github.com/RSG-Group/rsg-components/wiki/)
 
-## [Tutorial on YouTube by @Radi123](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x)
+## [Tutorial on YouTube by @radi-cho](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x)
 
 ### [Link to channel here.](https://www.youtube.com/c/RadiCho)
