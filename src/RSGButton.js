@@ -21,11 +21,11 @@ type Props = {
 
 // Create stylesheet of sizes.
 const sizes: Object = {
-  s: () => ({ padding: '1px 3px', fontSize: '12px' }),
-  l: () => ({ padding: '5px 7px', fontSize: '18px' }),
-  xl: () => ({ padding: '9px 11px', fontSize: '20px' }),
-  xxl: () => ({ padding: '12px 14px', fontSize: '25px' }),
-  default: () => ({ padding: '5px 4px', fontSize: '16px' })
+  s: { padding: '1px 3px', fontSize: '12px' },
+  l: { padding: '5px 7px', fontSize: '18px' },
+  xl: { padding: '9px 11px', fontSize: '20px' },
+  xxl: { padding: '12px 14px', fontSize: '25px' },
+  default: { padding: '5px 4px', fontSize: '16px' }
 }
 
 // Finally.. our component.
