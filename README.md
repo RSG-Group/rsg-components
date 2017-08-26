@@ -2,6 +2,8 @@
 
 ## Badges
 
+[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
 [![RSG-Group Slack Team](https://rsg-slack.herokuapp.com/badge.svg)](https://rsg-slack.herokuapp.com)
 
 ### Dependencies
