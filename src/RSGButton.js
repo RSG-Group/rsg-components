@@ -49,31 +49,32 @@ export default function RSGButton (props: Props): React.createElement {
       }
     },
     ripple: {
-      transition: 'all .15s ease-out',
-      '&:hover': {
-        '-moz-filter': 'brightness(117%)',
-        '-webkit-filter': 'brightness(117%)',
-        '-o-filter': 'brightness(117%)',
-        '-ms-filter': 'brightness(117%)',
-        filter: 'brightness(117%)'
+      position: 'relative',
+      overflow: 'hidden',
+      transform: 'translate3d(0, 0, 0)',
+      '&:after': {
+        content: '""',
+        display: 'block',
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        top: 0,
+        left: 0,
+        pointerEvents: 'none',
+        backgroundImage: 'radial-gradient(circle, #FFF 10%, transparent 10%)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '50%',
+        transform: 'scale(10,10)',
+        opacity: '0',
+        transition: 'transform .5s, opacity 1s'
       },
-      '&:active': {
-        borderRadius: '50%',
-        background: 'rgba(255, 255, 255, 0.35)'
+      '&:active:after': {
+        transform: 'scale(0,0)',
+        opacity: '.2',
+        transition: '0s'
       }
     }
   }
-
-  let divStyles: Object = props.animationType === 'ripple' ? {
-    '&:active': {
-      background: props.background,
-      '-moz-filter': 'brightness(125%)',
-      '-webkit-filter': 'brightness(125%)',
-      '-o-filter': 'brightness(125%)',
-      '-ms-filter': 'brightness(125%)',
-      filter: 'brightness(125%)'
-    }
-  } : {}
 
   const styles: Object = StyleSheet.create((() => {
     let extraAnimationStyling = {}
@@ -93,11 +94,6 @@ export default function RSGButton (props: Props): React.createElement {
         fontStyle: props.fontStyle,
         ...extraAnimationStyling,
         cursor: props.cursor
-      },
-      div: {
-        transition: 'all .2s ease-out',
-        display: 'inline-block',
-        ...divStyles
       }
     }
   })())
@@ -105,11 +101,9 @@ export default function RSGButton (props: Props): React.createElement {
   const exclude = ['style', 'background', 'color', 'fontSize', 'fontStyle', 'opacity', 'sizes', 'animationType', 'cursor', 'border']
 
   return (
-    <div className={css(styles.div)}>
-      <button className={css(styles.mainButton)} {...omit(props, exclude)} >
-        {props.children}
-      </button>
-    </div>
+    <button className={css(styles.mainButton)}{...omit(props, exclude)} >
+      { props.children }
+    </button>
   )
 }
 
