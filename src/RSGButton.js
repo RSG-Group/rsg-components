@@ -90,7 +90,7 @@ export default function RSGButton (props: Props): React.createElement {
         opacity: props.opacity,
         padding,
         ...props.style,
-        fontSize: props.fontSize ? props.fontSize : sizes[sizeId]().fontSize,
+        fontSize: props.fontSize ? props.fontSize : sizes[sizeId].fontSize,
         fontStyle: props.fontStyle,
         ...extraAnimationStyling,
         cursor: props.cursor
