@@ -67,9 +67,9 @@ export default class Clock extends React.Component<Props, State> {
       }
     })
 
-    if (size < 135) {
-      if (size <= 25) {
-        styles.mainSpan.style.fontSize = 10
+    if (size < 95) {
+      if (size <= 20) {
+        styles.mainSpan.style.fontSize = 8.5
       }
       return (
         <span className={css(styles.mainSpan)}>
@@ -100,8 +100,8 @@ export default class Clock extends React.Component<Props, State> {
     const angleM: Object = {
       x1: cx,
       y1: cy,
-      x2: sine(cx, size * 0.425, 180 - state.min),
-      y2: cosine(cy, size * 0.425, 180 - state.min)
+      x2: sine(cx, size * 0.35, 180 - state.min),
+      y2: cosine(cy, size * 0.35, 180 - state.min)
     }
     /// line coords dor the angle H;
     const angleH: Object = {
@@ -116,7 +116,7 @@ export default class Clock extends React.Component<Props, State> {
 
     // Our beautiful component
     return (
-      <div>
+      <div {...props}>
         <svg width={width} height={height}>
           {'Your device isn\'t support SVG. Please update your browser or OS...'}
           {/* The main circle */}
@@ -127,35 +127,35 @@ export default class Clock extends React.Component<Props, State> {
             style={{ stroke: 'black', fill: 'rgba(250, 237, 205, 0.25)' }}
           />
 
-          {/* The secondand */}
-          <line style={{ stroke: 'black' }} {...angleS} />
+          {/* The secondhand */}
+          <line style={{ stroke: 'gray', strokeWidth: size / 100 }} {...angleS} />
 
           {/* The minute hand */}
-          <line style={{ stroke: 'black', strokeWidth: '2px' }} {...angleM} />
+          <line style={{ stroke: 'black', strokeWidth: size / 60 }} {...angleM} />
           <line
             x1={angleM.x2}
             y1={angleM.y2}
-            x2={sine(cx, size * 0.35, 180 - (state.min - 4))}
-            y2={cosine(cy, size * 0.35, 180 - (state.min - 4))}
-            style={{ stroke: 'black', strokeWidth: '2px' }}
+            x2={sine(cx, size * 0.25, 180 - (state.min - 4))}
+            y2={cosine(cy, size * 0.25, 180 - (state.min - 4))}
+            style={{ stroke: 'black', strokeWidth: size / 60 }}
           />
           <line
             x1={angleM.x2}
             y1={angleM.y2}
-            x2={sine(cx, size * 0.35, 180 - (state.min + 4))}
-            y2={cosine(cy, size * 0.35, 180 - (state.min + 4))}
-            style={{ stroke: 'black', strokeWidth: '2px' }}
+            x2={sine(cx, size * 0.25, 180 - (state.min + 4))}
+            y2={cosine(cy, size * 0.25, 180 - (state.min + 4))}
+            style={{ stroke: 'black', strokeWidth: size / 60 }}
           />
 
           {/* The hour hand */}
-          <line style={{ stroke: 'black', strokeWidth: '3px' }} {...angleH} />
+          <line style={{ stroke: 'brown', strokeWidth: size / 32 }} {...angleH} />
 
           {/* Others */}
           <circle
             cx={cx}
             cy={cy}
-            r='3'
-            style={{ fill: 'blue', opacity: '0.5' }}
+            r={size / 30}
+            style={{ fill: 'blue', opacity: '0.975' }}
           />
           {new Array(12).fill('').map((ev, i) => {
             return (
