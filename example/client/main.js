@@ -12,7 +12,7 @@ import { render } from 'react-dom'
 import { createContainer } from 'meteor/react-meteor-data'
 // Please do not use the following lines in your code. Import RSGComponents from the module.
 import { StyleSheet, css } from 'aphrodite-jss'
-import { RSGButton, RSGBox, RSGLabel, RSGCheckbox } from '../imports/rsg-components'
+import { RSGButton, RSGBox, RSGLabel, RSGCheckbox, RSGClock } from '../imports/rsg-components'
 
 const RSGFormBasic = (props) => {
   const styles = StyleSheet.create({
@@ -77,6 +77,7 @@ class App extends Component {
         <RSGLabel labelType='success'>Database in sync with server.</RSGLabel>
         <br /><br />
         <RSGCheckbox checked={this.state.checked} large onChange={() => this.setState({ checked: !this.state.checked })} />
+        <RSGClock size={100} style={{position: 'fixed', top: '10px', right: '5%'}} />
       </div>
     )
   }
