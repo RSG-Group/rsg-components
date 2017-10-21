@@ -18,6 +18,7 @@ import RSGFormBasic from './RSGFormBasic'
 import RSGTransition from './RSGTransition'
 import RSGProgressBar from './RSGProgressBar'
 import RSGCheckbox from './RSGCheckbox'
+import RSGClock from './RSGClock'
 
 // Then export...
 export {
@@ -27,5 +28,6 @@ export {
   RSGFormBasic,
   RSGTransition,
   RSGProgressBar,
-  RSGCheckbox
+  RSGCheckbox,
+  RSGClock
 }
