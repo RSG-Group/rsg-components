@@ -1,6 +1,7 @@
 // @flow
 import * as React from 'react'
 import { StyleSheet, css } from 'aphrodite-jss'
+import { omit } from 'lodash'
 
 type Props = {
   size?: number
@@ -116,7 +117,10 @@ export default class Clock extends React.Component<Props, State> {
 
     // Our beautiful component
     return (
-      <div {...props}>
+      <div
+        {...omit(props, ['style', 'children'])}
+        style={{ display: 'inline-block', ...props.style }}
+      >
         <svg width={width} height={height}>
           {'Your device isn\'t support SVG. Please update your browser or OS...'}
           {/* The main circle */}
