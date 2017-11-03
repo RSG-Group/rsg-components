@@ -58,10 +58,10 @@ class App extends Component {
   /* eslint-disable max-len */
   render () {
     const string = `Username in state: ${this.state.username} /
-     Password in state: ${this.state.password} /
-     Username on database: ${this.props.db.toString()} /
-     Password on database: ${this.props.db.toString()} /
-     Is RSGCheckbox checked: ${this.state.checked}`
+Password in state: ${this.state.password} /
+Username on database: ${this.props.db.toString()} /
+Password on database: ${this.props.db.toString()} /
+Is RSGCheckbox checked: ${this.state.checked}`
     return (
       <div>
         <RSGFormBasic
@@ -70,7 +70,7 @@ class App extends Component {
         />
         <RSGButton onClick={this.handleClick}>Submit</RSGButton>
         <br /><br />
-        <RSGBox height={45}>
+        <RSGBox width={300}>
           {string}
         </RSGBox>
         <br />

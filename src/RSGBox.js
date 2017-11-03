@@ -20,26 +20,28 @@ export default function RSGBox (props: Props): React.createElement {
   // Create our styles.
   const styles: Object = StyleSheet.create({
     mainDiv: {
-      color: props.color,
       height: props.height,
+      width: props.width,
+      color: props.color,
       opacity: props.opacity,
       background: props.background,
-      padding: '0px 3px 0px 3px',
+      padding: '3px 7px',
       fontFamily: 'Verdana, Geneva, sans-serif',
-      width: props.width,
       ...props.style
     },
-    mainSpan: {
+    mainPre: {
       fontSize: '12px',
-      verticalAlign: 'middle'
+      verticalAlign: 'middle',
+      height: props.height,
+      width: props.width
     }
   })
 
   return (
     <div className={css(styles.mainDiv)} {...omit(props, ['style', 'background', 'color', 'opacity', 'width', 'height'])}>
-      <span className={css(styles.mainSpan)}>
+      <pre className={css(styles.mainPre)}>
         {props.children}
-      </span>
+      </pre>
     </div>
   )
 }
