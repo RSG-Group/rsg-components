@@ -21,7 +21,7 @@ export default function RSGCheckbox (props: Props): React.createElement {
   return (
     <div>
       <style>{compiledCSS}</style>
-      <label className={classy} htmlFor='checkbox' style={props.style} {...a}>
+      <label className={classy} style={props.style} {...a}>
         <input
           type='checkbox'
           onChange={props.onChange}
