@@ -50,9 +50,9 @@ git clone https://github.com/RSG-Group/rsg-components
 ```jsx
 import { render } from "react-dom";
 import React from "react";
-import { RSGCheckbox } from "rsg-components";
+import { Checkbox } from "rsg-components";
 
-render(<RSGCheckbox props>children</RSGCheckbox>, document.getElementById("app"));
+render(<Checkbox props>children</Checkbox>, document.getElementById("app"));
 ```
 
 View all components, props and styles on the GitHub wiki page: [https://github.com/RSG-Group/rsg-components/wiki/](https://github.com/RSG-Group/rsg-components/wiki/)

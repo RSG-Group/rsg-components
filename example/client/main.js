@@ -6,15 +6,15 @@ import { Meteor } from 'meteor/meteor'
 const data = Meteor.subscribe('data') // eslint-disable-line no-unused-vars
 const Database = new Mongo.Collection('database')
 Database.insert({ username: 'mongoo', password: 'dbbb' })
-// Import RSGComponents and React.
+// Import Components and React.
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import { createContainer } from 'meteor/react-meteor-data'
 // Please do not use the following lines in your code. Import RSGComponents from the module.
 import { StyleSheet, css } from 'aphrodite-jss'
-import { RSGButton, RSGBox, RSGLabel, RSGCheckbox, RSGClock } from '../imports/rsg-components'
+import { Button, Box, Label, Checkbox, Clock } from '../imports/rsg-components'
 
-const RSGFormBasic = (props) => {
+const FormBasic = (props) => {
   const styles = StyleSheet.create({
     inputStyle: {
       border: '1px solid rgb(128, 128, 128)',
@@ -61,23 +61,23 @@ class App extends Component {
 Password in state: ${this.state.password} /
 Username on database: ${this.props.db.toString()} /
 Password on database: ${this.props.db.toString()} /
-Is RSGCheckbox checked: ${this.state.checked}`
+Is Checkbox checked: ${this.state.checked}`
     return (
       <div>
-        <RSGFormBasic
+        <FormBasic
           onField1Change={e => this.setState({ username: e })}
           onField2Change={e => this.setState({ password: e })}
         />
-        <RSGButton onClick={this.handleClick}>Submit</RSGButton>
+        <Button onClick={this.handleClick}>Submit</Button>
         <br /><br />
-        <RSGBox width={300}>
+        <Box width={300}>
           {string}
-        </RSGBox>
+        </Box>
         <br />
-        <RSGLabel labelType='success'>Database in sync with server.</RSGLabel>
+        <Label labelType='success'>Database in sync with server.</Label>
         <br /><br />
-        <RSGCheckbox checked={this.state.checked} large onChange={() => this.setState({ checked: !this.state.checked })} />
-        <RSGClock size={100} style={{position: 'fixed', top: '10px', right: '5%'}} />
+        <Checkbox checked={this.state.checked} large onChange={() => this.setState({ checked: !this.state.checked })} />
+        <Clock size={100} style={{position: 'fixed', top: '10px', right: '5%'}} />
       </div>
     )
   }
