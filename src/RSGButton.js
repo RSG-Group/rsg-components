@@ -34,7 +34,7 @@ export default function RSGButton (props: Props): React.createElement {
   if (props.sizes) sizeId = props.sizes
   else { sizeId = 'default' }
   let padding = '5px 4px'
-  if (sizeId !== 'default') padding = sizes[sizeId]().padding
+  if (sizeId !== 'default') padding = sizes[sizeId].padding
 
   const animationStyling = {
     elevated: {
