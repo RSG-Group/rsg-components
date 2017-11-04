@@ -57,11 +57,11 @@ class App extends Component {
 
   /* eslint-disable max-len */
   render () {
-    const string = `Username in state: ${this.state.username} /
-Password in state: ${this.state.password} /
-Username on database: ${this.props.db.toString()} /
-Password on database: ${this.props.db.toString()} /
-Is Checkbox checked: ${this.state.checked}`
+    const string = `Username in state: ${this.state.username}
+Password in state: ${this.state.password}
+Username on database: ${this.props.db.toString()}
+Password on database: ${this.props.db.toString()}
+Is RSGCheckbox checked: ${this.state.checked}`
     return (
       <div>
         <FormBasic
