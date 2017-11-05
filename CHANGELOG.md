@@ -4,7 +4,7 @@
 
 ### 2.0.0
 
-[The component `Button` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGButton)
+[The component `RSGButton` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGButton)
 
 ### 2.0.1
 
@@ -12,16 +12,16 @@ README.md added.
 
 ### 2.0.2
 
-[The component `Box` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGBox)
+[The component `RSGBox` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGBox)
 
 ### 2.0.3
 
-- [The component `Label` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGLabel)
-- `Box` bug fixed.
+- [The component `RSGLabel` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGLabel)
+- `RSGBox` bug fixed.
 
 ### 2.0.4
 
-`Label` bug fix.
+`RSGLabel` bug fix.
 
 ### 2.0.5
 
@@ -29,16 +29,16 @@ Added GitHub repository in `package.json`
 
 ### 2.0.6
 
-[The component `FormBasic` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGFormBasic)
+[The component `RSGFormBasic` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGFormBasic)
 
 ### 2.0.7
 
-- [The `Transition` style function has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGTransition)
+- [The `RSGTransition` style function has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGTransition)
 - Also added sample paragraph in index.html
 
 ### 2.0.8
 
-- [The component `ProgressBar` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGProgressBar)
+- [The component `RSGProgressBar` has been introduced.](https://github.com/RSG-Group/rsg-components/wiki/RSGProgressBar)
 - Also added new images in GitHub repo.
 
 ### 2.0.9
@@ -47,13 +47,13 @@ You can now read some tips at `../rsg-components/tips`
 
 ### 2.0.10
 
-- `ProgressBar` bug fixed.
+- `RSGProgressBar` bug fixed.
 - `README.md` edited.
 - Also added new images for wiki.
 
 ### 2.0.11
 
-Update to `ProgressBar`
+Update to `RSGProgressBar`
 
 ### 2.0.12
 
@@ -61,9 +61,9 @@ Minor update to README.md and `images`
 
 ### 2.0.13
 
-A new component, `Checkbox`, has been introduced.
+A new component, `RSGCheckbox`, has been introduced.
 
-![Checkbox image](https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Checkboxes.png)
+![RSGCheckbox image](https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Checkboxes.png)
 
 You can theoretically use this without the `rsg-components` library. [Example here.](http://codepen.io/radicho/pen/jBJjPb)
 
