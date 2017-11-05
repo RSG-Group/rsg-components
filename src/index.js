@@ -11,23 +11,23 @@ See the License for the specific language governing permissions and
 limitations under the License. */
 
 // Let's import...
-import RSGBox from './RSGBox'
-import RSGButton from './RSGButton'
-import RSGLabel from './RSGLabel'
-import RSGFormBasic from './RSGFormBasic'
-import RSGTransition from './RSGTransition'
-import RSGProgressBar from './RSGProgressBar'
-import RSGCheckbox from './RSGCheckbox'
-import RSGClock from './RSGClock'
+import Box from './Box'
+import Button from './Button'
+import Label from './Label'
+import FormBasic from './FormBasic'
+import Transition from './Transition'
+import ProgressBar from './ProgressBar'
+import Checkbox from './Checkbox'
+import Clock from './Clock'
 
 // Then export...
 export {
-  RSGBox,
-  RSGButton,
-  RSGLabel,
-  RSGFormBasic,
-  RSGTransition,
-  RSGProgressBar,
-  RSGCheckbox,
-  RSGClock
+  Box,
+  Button,
+  Label,
+  FormBasic,
+  Transition,
+  ProgressBar,
+  Checkbox,
+  Clock
 }

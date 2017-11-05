@@ -63,8 +63,12 @@ Minor update to README.md and `images`
 
 A new component, `RSGCheckbox`, has been introduced.
 
-![Checkbox image](https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Checkboxes.png)
+![RSGCheckbox image](https://raw.githubusercontent.com/RSG-Group/rsg-components/master/images/Checkboxes.png)
 
 You can theoretically use this without the `rsg-components` library. [Example here.](http://codepen.io/radicho/pen/jBJjPb)
 
 [More info on its development here.](https://medium.com/@radicho/customized-checkboxes-9190f969b681)
+
+### 3.0.0-alpha.1 - 3.0.0-alpha.5
+
+New code style. Tons of bugfixes. New features and styles.
