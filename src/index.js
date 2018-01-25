@@ -19,6 +19,7 @@ import Transition from './Transition'
 import ProgressBar from './ProgressBar'
 import Checkbox from './Checkbox'
 import Clock from './Clock'
+import Input from './Input'
 
 // Then export...
 export {
@@ -29,5 +30,6 @@ export {
   Transition,
   ProgressBar,
   Checkbox,
-  Clock
+  Clock,
+  Input
 }
