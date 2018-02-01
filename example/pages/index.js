@@ -1,15 +1,6 @@
-/* eslint-disable react/prop-types,import/first */
-// Import MongoDB adapter.
-import { Mongo } from 'meteor/mongo'
-import { Meteor } from 'meteor/meteor'
-// Our database.
-const data = Meteor.subscribe('data') // eslint-disable-line no-unused-vars
-const Database = new Mongo.Collection('database')
-Database.insert({ username: 'mongoo', password: 'dbbb' })
+/* eslint-disable react/prop-types */
 // Import Components and React.
 import React, { Component } from 'react'
-import { render } from 'react-dom'
-import { createContainer } from 'meteor/react-meteor-data'
 // Please do not use the following lines in your code. Import RSGComponents from the module.
 import { StyleSheet, css } from 'aphrodite-jss'
 import { Button, Box, Label, Checkbox, Clock } from '../imports/rsg-components'
@@ -40,27 +31,15 @@ const FormBasic = (props) => {
   )
 }
 
-class App extends Component {
-  static handleClick () {
-    Database.remove({})
-    Database.insert(this.state)
-  }
-
+export default class Index extends Component {
   constructor () {
     super()
-    this.state = {
-      username: '',
-      password: '',
-      checked: false
-    }
+    this.state = { username: '', password: '', checked: false }
   }
 
-  /* eslint-disable max-len */
-  render () {
+  render = () => {
     const string = `Username in state: ${this.state.username}
 Password in state: ${this.state.password}
-Username on database: ${this.props.db.toString()}
-Password on database: ${this.props.db.toString()}
 Is RSGCheckbox checked: ${this.state.checked}`
     return (
       <div>
@@ -74,7 +53,7 @@ Is RSGCheckbox checked: ${this.state.checked}`
           {string}
         </Box>
         <br />
-        <Label labelType='success'>Database in sync with server.</Label>
+        <Label labelType='success'>State successfully changed.</Label>
         <br /><br />
         <Checkbox checked={this.state.checked} large onChange={() => this.setState({ checked: !this.state.checked })} />
         <Clock size={100} style={{position: 'fixed', top: '10px', right: '5%'}} />
@@ -82,10 +61,3 @@ Is RSGCheckbox checked: ${this.state.checked}`
     )
   }
 }
-/* eslint-enable */
-
-const AppContainer = createContainer(() => ({
-  db: Database.find()
-}), App)
-
-render(<AppContainer />, document.getElementById('app'))
