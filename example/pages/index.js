@@ -36,8 +36,7 @@ export default class Index extends Component {
     super()
     this.state = { username: '', password: '', checked: false }
   }
-
-  render = () => {
+  render () {
     const string = `Username in state: ${this.state.username}
 Password in state: ${this.state.password}
 Is RSGCheckbox checked: ${this.state.checked}`
