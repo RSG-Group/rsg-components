@@ -55,6 +55,13 @@ import { Checkbox } from "rsg-components";
 render(<Checkbox props>children</Checkbox>, document.getElementById("app"));
 ```
 
+An example in Next.js w/ aphrodite-jss is in `example/`.
+
+Run `yarn` or `npm i` here, then run `yarn build-example` or `npm run build-example`.
+
+Then run `yarn` and then `yarn dev` (or `npm i` and then `npm run dev` if you use npm) inside the `example` folder to run the example.
+
+
 View all components, props and styles on the GitHub wiki page: [https://github.com/RSG-Group/rsg-components/wiki/](https://github.com/RSG-Group/rsg-components/wiki/)
 
 ## [Tutorial on YouTube by @radi-cho](https://www.youtube.com/playlist?list=PLBKNj-_iswgrl1XNhpfgGKwfrP_hEoZ2x)
