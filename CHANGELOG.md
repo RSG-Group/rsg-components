@@ -72,3 +72,10 @@ You can theoretically use this without the `rsg-components` library. [Example he
 ### 3.0.0-alpha.1 - 3.0.0-alpha.5
 
 New code style. Tons of bugfixes. New features and styles.
+
+### 3.0.0
+
+- New components, `Clock` and `Input`, have been introduced.
+- The wiki documentation, has been renewed.
+- Example with the existing components has been introduced.
+- A lot of bugfixes and improvements.
