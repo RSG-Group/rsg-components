@@ -8,7 +8,8 @@
     "build": "lessc less/index.less lib/index.css && rollup -c rollup.config.js",
     "build-example": "rollup -c rollup.config.js -o example/imports/rsg-components.js",
     "lint": "stylelint \"less/**/*.less\" --fix && flow check && eslint .",
-    "prepublish": "lessc less/index.less lib/index.css && rollup -c rollup.config.js"
+    "prepublish": "npm run snyk-protect; lessc less/index.less lib/index.css && rollup -c rollup.config.js",
+    "snyk-protect": "snyk protect"
   },
   "license": "Apache-2.0",
   "repository": {
@@ -18,9 +19,10 @@
   "author": "RSG",
   "dependencies": {
     "aphrodite-jss": "^2.0.0",
-    "less": "^2.7.2",
-    "lodash": "^4.17.4",
-    "react-dom": "^16.2.0"
+    "less": "^3.0.2",
+    "lodash": "^4.17.12",
+    "react-dom": "^16.2.1",
+    "snyk": "^1.192.6"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.72",
@@ -61,5 +63,6 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
-  }
+  },
+  "snyk": true
 }
